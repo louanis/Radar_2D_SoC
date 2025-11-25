@@ -1,5 +1,5 @@
 Flow report for Individual_Component_Test
-Tue Nov 25 16:47:59 2025
+Tue Nov 25 19:04:17 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 25 16:47:56 2025       ;
+; Flow Status                        ; Successful - Tue Nov 25 19:04:14 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Individual_Component_Test                   ;
 ; Top-level Entity Name              ; individual_component_test                   ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------------+
 ; Option            ; Setting                   ;
 +-------------------+---------------------------+
-; Start date & time ; 11/25/2025 16:47:36       ;
+; Start date & time ; 11/25/2025 19:03:52       ;
 ; Main task         ; Compilation               ;
 ; Revision Name     ; Individual_Component_Test ;
 +-------------------+---------------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+---------------------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name               ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+---------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 209763097149745.176408565616864        ; --            ; --                        ; --         ;
+; COMPILER_SIGNATURE_ID               ; 209763097149745.176409383227352        ; --            ; --                        ; --         ;
 ; ENABLE_SIGNALTAP                    ; On                                     ; --            ; --                        ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --                        ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --                        ; --         ;
@@ -95,11 +95,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4883 MB             ; 00:00:13                           ;
-; Fitter               ; 00:00:08     ; 1.4                     ; 6643 MB             ; 00:00:17                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4693 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.9                     ; 4974 MB             ; 00:00:02                           ;
-; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:34                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4891 MB             ; 00:00:16                           ;
+; Fitter               ; 00:00:08     ; 1.5                     ; 6641 MB             ; 00:00:17                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4693 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.9                     ; 4977 MB             ; 00:00:03                           ;
+; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:38                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

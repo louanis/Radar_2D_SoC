@@ -3,17 +3,19 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity TELEMETRE_US is
+entity telemetre_us is
     port(
-        clk      : in std_logic;
-        rst_n    : in std_logic;
-        echo     : in std_logic;
+        clk      : in  std_logic;
+        rst_n    : in  std_logic;
+        echo     : in  std_logic;
+        Read_n   : in  std_logic;
         trig     : out std_logic;
-        dist_cm  : out std_logic_vector(9 downto 0)
+        dist_cm  : out std_logic_vector(9 downto 0);
+        readdata : out std_logic_vector(31 downto 0)
     );
-end TELEMETRE_US;
+end telemetre_us;
 
-architecture rtl of TELEMETRE_US is
+architecture rtl of telemetre_us is
     type state is (TRIGGER, WAIT_ECHO, WAIT_END_ECHO, CALC_DIST, WAIT_TRIGGER);
     signal curr_state : state;
 
@@ -34,6 +36,14 @@ begin
     process(clk, rst_n)
         variable dist : integer := 0;
     begin
+
+        if Read_n = '0' then
+            readdata <= std_logic_vector(to_unsigned(cmpt_echo,32));
+        else
+            readdata <= (others => '0');
+        end if;
+
+
         if rst_n = '0' then
             result <= (others => '0');
         elsif rising_edge(clk) then

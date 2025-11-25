@@ -40,11 +40,13 @@ begin
 -- Instantiate TELEMETRE_US component
 TELEMETRE_US_inst : entity work.TELEMETRE_US
     port map (
-        clk     => CLOCK_50,
-        rst_n   => KEY(0),
-        echo    => GPIO(0),
-        trig    => GPIO(1),
-        dist_cm => dist
+        clk      => CLOCK_50,
+        rst_n    => KEY(0),
+        echo     => GPIO(0),
+        trig     => GPIO(1),
+        dist_cm  => dist,
+		  read_n   => '0',
+		  readdata => open
     );
 
 -- Display distance on HEX displays

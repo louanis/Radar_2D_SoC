@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Individual_Component_Test
-Tue Nov 25 16:47:46 2025
+Tue Nov 25 19:04:03 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -27,9 +27,10 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  19. Port Connectivity Checks: "binary_to_sevseg_3dig:SEVSEG_inst|SEVEN_SEG:U3"
  20. Port Connectivity Checks: "binary_to_sevseg_3dig:SEVSEG_inst|SEVEN_SEG:U2"
  21. Port Connectivity Checks: "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1"
- 22. Post-Synthesis Netlist Statistics for Top Partition
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
+ 22. Port Connectivity Checks: "TELEMETRE_US:TELEMETRE_US_inst"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
 
 
 
@@ -55,7 +56,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 25 16:47:46 2025       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 25 19:04:03 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Individual_Component_Test                   ;
 ; Top-level Entity Name              ; individual_component_test                   ;
@@ -180,7 +181,8 @@ refer to the applicable agreement for further details.
 ;     Processor 6            ;   0.0%      ;
 ;     Processor 7            ;   0.0%      ;
 ;     Processor 8            ;   0.0%      ;
-;     Processors 9-16        ;   0.0%      ;
+;     Processor 9            ;   0.0%      ;
+;     Processors 10-16       ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -514,6 +516,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TELEMETRE_US:TELEMETRE_US_inst"                                                         ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; read_n   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; readdata ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -557,7 +569,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 25 16:47:36 2025
+    Info: Processing started: Tue Nov 25 19:03:51 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Individual_Component_Test -c Individual_Component_Test
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -571,7 +583,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: binary_to_sevseg_3dig-Behavioral File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/binary_to_sevseg_3dig.vhd Line: 20
     Info (12023): Found entity 1: binary_to_sevseg_3dig File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/binary_to_sevseg_3dig.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file /users/yanis/documents/cours/projet_soc/radar_2d_soc/src/telemetre_us.vhd
-    Info (12022): Found design unit 1: TELEMETRE_US-rtl File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 16
+    Info (12022): Found design unit 1: TELEMETRE_US-rtl File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 18
     Info (12023): Found entity 1: TELEMETRE_US File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file /users/yanis/documents/cours/projet_soc/radar_2d_soc/src/individual_component_test.vhd
     Info (12022): Found design unit 1: individual_component_test-Behavioral File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 35
@@ -584,8 +596,10 @@ Warning (10873): Using initial value X (don't care) for net "HEX0[7]" at individ
 Warning (10873): Using initial value X (don't care) for net "HEX1[7]" at individual_component_test.vhd(18) File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 18
 Warning (10873): Using initial value X (don't care) for net "HEX2[7]" at individual_component_test.vhd(19) File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 19
 Info (12128): Elaborating entity "TELEMETRE_US" for hierarchy "TELEMETRE_US:TELEMETRE_US_inst" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 41
-Warning (10036): Verilog HDL or VHDL warning at telemetre_us.vhd(31): object "result" assigned a value but never read File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 31
-Info (12128): Elaborating entity "binary_to_sevseg_3dig" for hierarchy "binary_to_sevseg_3dig:SEVSEG_inst" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 52
+Warning (10036): Verilog HDL or VHDL warning at telemetre_us.vhd(33): object "result" assigned a value but never read File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 33
+Warning (10492): VHDL Process Statement warning at telemetre_us.vhd(40): signal "Read_n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 40
+Warning (10492): VHDL Process Statement warning at telemetre_us.vhd(41): signal "cmpt_echo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 41
+Info (12128): Elaborating entity "binary_to_sevseg_3dig" for hierarchy "binary_to_sevseg_3dig:SEVSEG_inst" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 54
 Info (12128): Elaborating entity "Decimal_Digits" for hierarchy "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/binary_to_sevseg_3dig.vhd Line: 50
 Info (12128): Elaborating entity "SEVEN_SEG" for hierarchy "binary_to_sevseg_3dig:SEVSEG_inst|SEVEN_SEG:U2" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/binary_to_sevseg_3dig.vhd Line: 60
 Info (278001): Inferred 6 megafunctions from design logic
@@ -594,7 +608,7 @@ Info (278001): Inferred 6 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|Mod1" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 22
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|Div1" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 21
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|Mod0" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 21
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TELEMETRE_US:TELEMETRE_US_inst|Div0" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 66
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TELEMETRE_US:TELEMETRE_US_inst|Div0" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 76
 Info (12130): Elaborated megafunction instantiation "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod2" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 23
 Info (12133): Instantiated megafunction "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod2" with the following parameter: File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 23
     Info (12134): Parameter "LPM_WIDTHN" = "14"
@@ -641,8 +655,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_rlh File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/sign_div_unsign_rlh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_0ie.tdf
     Info (12023): Found entity 1: alt_u_div_0ie File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_0ie.tdf Line: 26
-Info (12130): Elaborated megafunction instantiation "TELEMETRE_US:TELEMETRE_US_inst|lpm_divide:Div0" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 66
-Info (12133): Instantiated megafunction "TELEMETRE_US:TELEMETRE_US_inst|lpm_divide:Div0" with the following parameter: File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 66
+Info (12130): Elaborated megafunction instantiation "TELEMETRE_US:TELEMETRE_US_inst|lpm_divide:Div0" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 76
+Info (12133): Instantiated megafunction "TELEMETRE_US:TELEMETRE_US_inst|lpm_divide:Div0" with the following parameter: File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 76
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "16"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
@@ -755,10 +769,10 @@ Info (21057): Implemented 1664 device resources after synthesis - the final reso
     Info (21059): Implemented 58 output pins
     Info (21060): Implemented 36 bidirectional pins
     Info (21061): Implemented 1557 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 88 warnings
-    Info: Peak virtual memory: 4883 megabytes
-    Info: Processing ended: Tue Nov 25 16:47:46 2025
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:13
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 90 warnings
+    Info: Peak virtual memory: 4891 megabytes
+    Info: Processing ended: Tue Nov 25 19:04:03 2025
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:16
 
 

@@ -18,13 +18,12 @@ architecture tb of tb_telemetre_us is
     -- Clock period for 50 MHz = 20 ns
     constant T_CLK : time := 20 ns;
 
-    -- Simulation parameters
-    -- Distance simulée : 100 cm par exemple
-    constant SIM_DIST_CM : integer := 17;
 
     -- Temps de propagation : 58 us par cm (aller+retour)
     -- Valeur classique pour HC-SR04
-    constant ECHO_PW : time := SIM_DIST_CM * 58 us;
+    constant ECHO_PW1 : time := 17 * 58 us;
+    constant ECHO_PW2 : time := 150 * 58 us;
+    constant ECHO_PW3 : time := 399 * 58 us;
 
 begin
 
@@ -62,8 +61,6 @@ begin
         -- Simulation boucle :
         -- On détecte un front montant de trig,
         -- on laisse 1 us, puis on active echo pendant ECHO_PW.
-        --------------------------------------------------------
-        while now < 300 ms loop    -- durée de simulation
             ----------------------------------------------------
             -- attendre le front montant de trig du DUT
             ----------------------------------------------------
@@ -74,12 +71,40 @@ begin
 
             -- echo = 1 pour une durée proportionnelle à la distance
             echo <= '1';
-            wait for ECHO_PW;
+            wait for ECHO_PW1;
             echo <= '0';
 
             -- Le télémetre réel impose 60 ms entre mesures
             wait for 60 ms;
-        end loop;
+
+            wait until rising_edge(trig);
+
+            -- Le vrai télémetre impose au moins 1 us avant echo
+            wait for 1 us;
+
+            -- echo = 1 pour une durée proportionnelle à la distance
+            echo <= '1';
+            wait for ECHO_PW2;
+            echo <= '0';
+
+            -- Le télémetre réel impose 60 ms entre mesures
+            wait for 60 ms;
+
+
+            wait until rising_edge(trig);
+
+            -- Le vrai télémetre impose au moins 1 us avant echo
+            wait for 1 us;
+
+            -- echo = 1 pour une durée proportionnelle à la distance
+            echo <= '1';
+            wait for ECHO_PW3;
+            echo <= '0';
+
+            -- Le télémetre réel impose 60 ms entre mesures
+            wait for 60 ms;
+
+        
 
         wait;
     end process;
