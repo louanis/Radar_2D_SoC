@@ -1,5 +1,5 @@
 Fitter report for Individual_Component_Test
-Tue Nov 25 19:04:11 2025
+Wed Nov 26 14:08:29 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue Nov 25 19:04:11 2025       ;
+; Fitter Status                      ; Successful - Wed Nov 26 14:08:29 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Individual_Component_Test                   ;
 ; Top-level Entity Name              ; individual_component_test                   ;
@@ -150,22 +150,17 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.46        ;
-; Maximum used               ; 16          ;
+; Average used               ; 1.23        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.2%      ;
-;     Processor 3            ;   3.1%      ;
-;     Processor 4            ;   3.1%      ;
-;     Processor 5            ;   3.1%      ;
-;     Processor 6            ;   3.1%      ;
-;     Processor 7            ;   3.1%      ;
-;     Processor 8            ;   3.1%      ;
-;     Processors 9-16        ;   3.0%      ;
+;     Processor 2            ;   7.7%      ;
+;     Processor 3            ;   7.6%      ;
+;     Processor 4            ;   7.6%      ;
 +----------------------------+-------------+
 
 
@@ -371,7 +366,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/Individual_Component_Test.pin.
+The pin-out file can be found in C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/Individual_Component_Test.pin.
 
 
 +----------------------------------------------------------------------+
@@ -418,8 +413,8 @@ The pin-out file can be found in C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar
 ; Remote update blocks                        ; 0 / 1 ( 0 % )          ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )          ;
 ; Impedance control blocks                    ; 0 / 1 ( 0 % )          ;
-; Average interconnect usage (total/H/V)      ; 0.8% / 0.7% / 0.9%     ;
-; Peak interconnect usage (total/H/V)         ; 14.3% / 11.7% / 18.1%  ;
+; Average interconnect usage (total/H/V)      ; 0.7% / 0.6% / 0.9%     ;
+; Peak interconnect usage (total/H/V)         ; 12.8% / 11.1% / 15.1%  ;
 ; Maximum fan-out                             ; 112                    ;
 ; Highest non-global fan-out                  ; 75                     ;
 ; Total fan-out                               ; 4831                   ;
@@ -455,7 +450,7 @@ The pin-out file can be found in C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar
 ;     -- Dedicated logic registers            ; 112 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 121 / 3110 ( 4 % )    ; 0 / 3110 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 120 / 3110 ( 4 % )    ; 0 / 3110 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 107                   ; 0                              ;
@@ -593,7 +588,7 @@ The pin-out file can be found in C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+--------------------+---------------------------+----------------------------+----------------------+----------------------+---------------------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Output Termination ; Termination Control Block ; Output Buffer Pre-emphasis ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+--------------------+---------------------------+----------------------------+----------------------+----------------------+---------------------+
-; GPIO[0]  ; V10   ; 3        ; 31           ; 0            ; 21           ; 2                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; GPIO[0]  ; V10   ; 3        ; 31           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; GPIO[10] ; W5    ; 3        ; 14           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; GPIO[11] ; AA15  ; 4        ; 54           ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; GPIO[12] ; AA14  ; 4        ; 51           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
@@ -622,7 +617,7 @@ The pin-out file can be found in C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar
 ; GPIO[33] ; Y3    ; 3        ; 24           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; GPIO[34] ; AB2   ; 3        ; 22           ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; GPIO[35] ; AA2   ; 3        ; 18           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-; GPIO[3]  ; W9    ; 3        ; 22           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; GPIO[3]  ; W9    ; 3        ; 22           ; 0            ; 0            ; 2                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; GPIO[4]  ; V8    ; 3        ; 20           ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; GPIO[5]  ; W8    ; 3        ; 24           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; GPIO[6]  ; V7    ; 3        ; 20           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
@@ -1221,8 +1216,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; LEDR[7]  ; Missing drive strength ;
 ; LEDR[8]  ; Missing drive strength ;
 ; LEDR[9]  ; Missing drive strength ;
+; GPIO[0]  ; Missing drive strength ;
 ; GPIO[2]  ; Missing drive strength ;
-; GPIO[3]  ; Missing drive strength ;
 ; GPIO[4]  ; Missing drive strength ;
 ; GPIO[5]  ; Missing drive strength ;
 ; GPIO[6]  ; Missing drive strength ;
@@ -1255,8 +1250,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; GPIO[33] ; Missing drive strength ;
 ; GPIO[34] ; Missing drive strength ;
 ; GPIO[35] ; Missing drive strength ;
-; GPIO[0]  ; Missing drive strength ;
 ; GPIO[1]  ; Missing drive strength ;
+; GPIO[3]  ; Missing drive strength ;
 +----------+------------------------+
 
 
@@ -1266,12 +1261,6 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; Compilation Hierarchy Node                   ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                                                                                                                                                            ; Entity Name               ; Library Name ;
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
 ; |individual_component_test                   ; 1558 (1)    ; 112 (0)                   ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 107  ; 0            ; 1446 (1)     ; 2 (0)             ; 110 (0)          ; 0          ; |individual_component_test                                                                                                                                                     ; individual_component_test ; work         ;
-;    |TELEMETRE_US:TELEMETRE_US_inst|          ; 1039 (205)  ; 112 (112)                 ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 927 (93)     ; 2 (2)             ; 110 (100)        ; 0          ; |individual_component_test|TELEMETRE_US:TELEMETRE_US_inst                                                                                                                      ; TELEMETRE_US              ; work         ;
-;       |lpm_divide:Div0|                      ; 844 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 834 (0)      ; 0 (0)             ; 10 (0)           ; 0          ; |individual_component_test|TELEMETRE_US:TELEMETRE_US_inst|lpm_divide:Div0                                                                                                      ; lpm_divide                ; work         ;
-;          |lpm_divide_1do:auto_generated|     ; 844 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 834 (0)      ; 0 (0)             ; 10 (0)           ; 0          ; |individual_component_test|TELEMETRE_US:TELEMETRE_US_inst|lpm_divide:Div0|lpm_divide_1do:auto_generated                                                                        ; lpm_divide_1do            ; work         ;
-;             |abs_divider_6dg:divider|        ; 844 (20)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 834 (10)     ; 0 (0)             ; 10 (10)          ; 0          ; |individual_component_test|TELEMETRE_US:TELEMETRE_US_inst|lpm_divide:Div0|lpm_divide_1do:auto_generated|abs_divider_6dg:divider                                                ; abs_divider_6dg           ; work         ;
-;                |alt_u_div_0le:divider|       ; 777 (777)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 777 (777)    ; 0 (0)             ; 0 (0)            ; 0          ; |individual_component_test|TELEMETRE_US:TELEMETRE_US_inst|lpm_divide:Div0|lpm_divide_1do:auto_generated|abs_divider_6dg:divider|alt_u_div_0le:divider                          ; alt_u_div_0le             ; work         ;
-;                |lpm_abs_8b9:my_abs_num|      ; 47 (47)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 47 (47)      ; 0 (0)             ; 0 (0)            ; 0          ; |individual_component_test|TELEMETRE_US:TELEMETRE_US_inst|lpm_divide:Div0|lpm_divide_1do:auto_generated|abs_divider_6dg:divider|lpm_abs_8b9:my_abs_num                         ; lpm_abs_8b9               ; work         ;
 ;    |binary_to_sevseg_3dig:SEVSEG_inst|       ; 518 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 518 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |individual_component_test|binary_to_sevseg_3dig:SEVSEG_inst                                                                                                                   ; binary_to_sevseg_3dig     ; work         ;
 ;       |Decimal_Digits:U1|                    ; 497 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 497 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |individual_component_test|binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1                                                                                                 ; Decimal_Digits            ; work         ;
 ;          |lpm_divide:Div1|                   ; 70 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 70 (0)       ; 0 (0)             ; 0 (0)            ; 0          ; |individual_component_test|binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Div1                                                                                 ; lpm_divide                ; work         ;
@@ -1297,6 +1286,12 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;       |SEVEN_SEG:U2|                         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |individual_component_test|binary_to_sevseg_3dig:SEVSEG_inst|SEVEN_SEG:U2                                                                                                      ; SEVEN_SEG                 ; work         ;
 ;       |SEVEN_SEG:U3|                         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |individual_component_test|binary_to_sevseg_3dig:SEVSEG_inst|SEVEN_SEG:U3                                                                                                      ; SEVEN_SEG                 ; work         ;
 ;       |SEVEN_SEG:U4|                         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |individual_component_test|binary_to_sevseg_3dig:SEVSEG_inst|SEVEN_SEG:U4                                                                                                      ; SEVEN_SEG                 ; work         ;
+;    |telemetre_us:TELEMETRE_US_inst|          ; 1039 (205)  ; 112 (112)                 ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 927 (93)     ; 2 (2)             ; 110 (100)        ; 0          ; |individual_component_test|telemetre_us:TELEMETRE_US_inst                                                                                                                      ; telemetre_us              ; work         ;
+;       |lpm_divide:Div0|                      ; 844 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 834 (0)      ; 0 (0)             ; 10 (0)           ; 0          ; |individual_component_test|telemetre_us:TELEMETRE_US_inst|lpm_divide:Div0                                                                                                      ; lpm_divide                ; work         ;
+;          |lpm_divide_1do:auto_generated|     ; 844 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 834 (0)      ; 0 (0)             ; 10 (0)           ; 0          ; |individual_component_test|telemetre_us:TELEMETRE_US_inst|lpm_divide:Div0|lpm_divide_1do:auto_generated                                                                        ; lpm_divide_1do            ; work         ;
+;             |abs_divider_6dg:divider|        ; 844 (20)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 834 (10)     ; 0 (0)             ; 10 (10)          ; 0          ; |individual_component_test|telemetre_us:TELEMETRE_US_inst|lpm_divide:Div0|lpm_divide_1do:auto_generated|abs_divider_6dg:divider                                                ; abs_divider_6dg           ; work         ;
+;                |alt_u_div_0le:divider|       ; 777 (777)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 777 (777)    ; 0 (0)             ; 0 (0)            ; 0          ; |individual_component_test|telemetre_us:TELEMETRE_US_inst|lpm_divide:Div0|lpm_divide_1do:auto_generated|abs_divider_6dg:divider|alt_u_div_0le:divider                          ; alt_u_div_0le             ; work         ;
+;                |lpm_abs_8b9:my_abs_num|      ; 47 (47)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 47 (47)      ; 0 (0)             ; 0 (0)            ; 0          ; |individual_component_test|telemetre_us:TELEMETRE_US_inst|lpm_divide:Div0|lpm_divide_1do:auto_generated|abs_divider_6dg:divider|lpm_abs_8b9:my_abs_num                         ; lpm_abs_8b9               ; work         ;
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1375,8 +1370,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SW[7]    ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; SW[8]    ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; SW[9]    ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; GPIO[0]  ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; GPIO[2]  ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
-; GPIO[3]  ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; GPIO[4]  ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; GPIO[5]  ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; GPIO[6]  ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
@@ -1409,8 +1404,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GPIO[33] ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; GPIO[34] ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; GPIO[35] ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
-; GPIO[0]  ; Bidir    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; GPIO[1]  ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; GPIO[3]  ; Bidir    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; CLOCK_50 ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; KEY[0]   ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 +----------+----------+---------------+---------------+-----------------------+-----+------+
@@ -1432,8 +1427,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SW[7]                                                           ;                   ;         ;
 ; SW[8]                                                           ;                   ;         ;
 ; SW[9]                                                           ;                   ;         ;
+; GPIO[0]                                                         ;                   ;         ;
 ; GPIO[2]                                                         ;                   ;         ;
-; GPIO[3]                                                         ;                   ;         ;
 ; GPIO[4]                                                         ;                   ;         ;
 ; GPIO[5]                                                         ;                   ;         ;
 ; GPIO[6]                                                         ;                   ;         ;
@@ -1466,48 +1461,48 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GPIO[33]                                                        ;                   ;         ;
 ; GPIO[34]                                                        ;                   ;         ;
 ; GPIO[35]                                                        ;                   ;         ;
-; GPIO[0]                                                         ;                   ;         ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_echo[0]~40           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|curr_state.WAIT_TRIGGER~0 ; 0                 ; 6       ;
 ; GPIO[1]                                                         ;                   ;         ;
+; GPIO[3]                                                         ;                   ;         ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_echo[0]~40           ; 1                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|curr_state.WAIT_TRIGGER~0 ; 1                 ; 6       ;
 ; CLOCK_50                                                        ;                   ;         ;
 ; KEY[0]                                                          ;                   ;         ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[6]            ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[7]            ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[8]            ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[9]            ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[10]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[11]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[12]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[13]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[14]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[15]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[16]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[17]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[18]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[19]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[20]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[21]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[22]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[23]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[24]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[25]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[26]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[27]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[28]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[29]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[30]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[31]           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[5]            ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[4]            ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[3]            ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[2]            ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[1]            ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_global[0]            ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|dist_cm[9]~0              ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt_echo[0]~40           ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|curr_state.WAIT_TRIGGER~2 ; 0                 ; 6       ;
-;      - TELEMETRE_US:TELEMETRE_US_inst|cmpt[31]~97               ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[6]            ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[7]            ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[8]            ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[9]            ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[10]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[11]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[12]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[13]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[14]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[15]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[16]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[17]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[18]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[19]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[20]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[21]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[22]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[23]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[24]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[25]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[26]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[27]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[28]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[29]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[30]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[31]           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[5]            ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[4]            ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[3]            ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[2]            ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[1]            ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_global[0]            ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|dist_cm[9]~0              ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt_echo[0]~40           ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|curr_state.WAIT_TRIGGER~2 ; 0                 ; 6       ;
+;      - telemetre_us:TELEMETRE_US_inst|cmpt[31]~97               ; 0                 ; 6       ;
 +-----------------------------------------------------------------+-------------------+---------+
 
 
@@ -1518,13 +1513,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; CLOCK_50                                                 ; PIN_P11            ; 112     ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
 ; KEY[0]                                                   ; PIN_B8             ; 36      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; TELEMETRE_US:TELEMETRE_US_inst|LessThan1~9               ; LCCOMB_X35_Y37_N0  ; 38      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; TELEMETRE_US:TELEMETRE_US_inst|cmpt[31]~97               ; LCCOMB_X35_Y37_N6  ; 33      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; TELEMETRE_US:TELEMETRE_US_inst|cmpt_echo[0]~40           ; LCCOMB_X35_Y37_N8  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; TELEMETRE_US:TELEMETRE_US_inst|cmpt~96                   ; LCCOMB_X37_Y37_N0  ; 32      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; TELEMETRE_US:TELEMETRE_US_inst|curr_state.WAIT_END_ECHO  ; FF_X35_Y37_N21     ; 36      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; TELEMETRE_US:TELEMETRE_US_inst|curr_state.WAIT_TRIGGER~2 ; LCCOMB_X35_Y37_N16 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; TELEMETRE_US:TELEMETRE_US_inst|dist_cm[9]~0              ; LCCOMB_X35_Y37_N14 ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; telemetre_us:TELEMETRE_US_inst|LessThan1~9               ; LCCOMB_X31_Y24_N2  ; 38      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; telemetre_us:TELEMETRE_US_inst|cmpt[31]~97               ; LCCOMB_X30_Y26_N18 ; 33      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; telemetre_us:TELEMETRE_US_inst|cmpt_echo[0]~40           ; LCCOMB_X30_Y26_N2  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; telemetre_us:TELEMETRE_US_inst|cmpt~96                   ; LCCOMB_X30_Y26_N16 ; 32      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; telemetre_us:TELEMETRE_US_inst|curr_state.WAIT_END_ECHO  ; FF_X30_Y26_N11     ; 36      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; telemetre_us:TELEMETRE_US_inst|curr_state.WAIT_TRIGGER~2 ; LCCOMB_X30_Y26_N30 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; telemetre_us:TELEMETRE_US_inst|dist_cm[9]~0              ; LCCOMB_X43_Y26_N22 ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +----------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1542,15 +1537,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 1,983 / 148,641 ( 1 % ) ;
-; C16 interconnects     ; 38 / 5,382 ( < 1 % )    ;
-; C4 interconnects      ; 994 / 106,704 ( < 1 % ) ;
-; Direct links          ; 469 / 148,641 ( < 1 % ) ;
+; Block interconnects   ; 2,021 / 148,641 ( 1 % ) ;
+; C16 interconnects     ; 27 / 5,382 ( < 1 % )    ;
+; C4 interconnects      ; 985 / 106,704 ( < 1 % ) ;
+; Direct links          ; 443 / 148,641 ( < 1 % ) ;
 ; Global clocks         ; 1 / 20 ( 5 % )          ;
-; Local interconnects   ; 635 / 49,760 ( 1 % )    ;
+; Local interconnects   ; 617 / 49,760 ( 1 % )    ;
 ; NSLEEPs               ; 0 / 500 ( 0 % )         ;
-; R24 interconnects     ; 34 / 5,406 ( < 1 % )    ;
-; R4 interconnects      ; 930 / 147,764 ( < 1 % ) ;
+; R24 interconnects     ; 18 / 5,406 ( < 1 % )    ;
+; R4 interconnects      ; 959 / 147,764 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
@@ -1560,21 +1555,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of Logic Elements  (Average = 12.88) ; Number of LABs  (Total = 121) ;
 +---------------------------------------------+-------------------------------+
 ; 1                                           ; 7                             ;
-; 2                                           ; 3                             ;
-; 3                                           ; 5                             ;
+; 2                                           ; 2                             ;
+; 3                                           ; 4                             ;
 ; 4                                           ; 3                             ;
 ; 5                                           ; 1                             ;
 ; 6                                           ; 2                             ;
-; 7                                           ; 1                             ;
-; 8                                           ; 0                             ;
+; 7                                           ; 2                             ;
+; 8                                           ; 2                             ;
 ; 9                                           ; 0                             ;
-; 10                                          ; 1                             ;
-; 11                                          ; 3                             ;
-; 12                                          ; 10                            ;
-; 13                                          ; 3                             ;
-; 14                                          ; 5                             ;
+; 10                                          ; 3                             ;
+; 11                                          ; 2                             ;
+; 12                                          ; 5                             ;
+; 13                                          ; 6                             ;
+; 14                                          ; 8                             ;
 ; 15                                          ; 9                             ;
-; 16                                          ; 68                            ;
+; 16                                          ; 65                            ;
 +---------------------------------------------+-------------------------------+
 
 
@@ -1596,27 +1591,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
 ; 1                                            ; 7                             ;
-; 2                                            ; 3                             ;
-; 3                                            ; 4                             ;
-; 4                                            ; 5                             ;
-; 5                                            ; 1                             ;
+; 2                                            ; 2                             ;
+; 3                                            ; 3                             ;
+; 4                                            ; 4                             ;
+; 5                                            ; 2                             ;
 ; 6                                            ; 5                             ;
-; 7                                            ; 1                             ;
-; 8                                            ; 0                             ;
+; 7                                            ; 2                             ;
+; 8                                            ; 2                             ;
 ; 9                                            ; 1                             ;
-; 10                                           ; 2                             ;
-; 11                                           ; 3                             ;
-; 12                                           ; 10                            ;
-; 13                                           ; 2                             ;
-; 14                                           ; 5                             ;
-; 15                                           ; 30                            ;
-; 16                                           ; 34                            ;
+; 10                                           ; 4                             ;
+; 11                                           ; 2                             ;
+; 12                                           ; 4                             ;
+; 13                                           ; 6                             ;
+; 14                                           ; 8                             ;
+; 15                                           ; 28                            ;
+; 16                                           ; 33                            ;
 ; 17                                           ; 0                             ;
-; 18                                           ; 0                             ;
+; 18                                           ; 1                             ;
 ; 19                                           ; 0                             ;
 ; 20                                           ; 0                             ;
 ; 21                                           ; 0                             ;
-; 22                                           ; 2                             ;
+; 22                                           ; 1                             ;
 ; 23                                           ; 0                             ;
 ; 24                                           ; 0                             ;
 ; 25                                           ; 0                             ;
@@ -1637,21 +1632,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------+-------------------------------+
 ; 0                                               ; 0                             ;
 ; 1                                               ; 10                            ;
-; 2                                               ; 8                             ;
-; 3                                               ; 6                             ;
-; 4                                               ; 5                             ;
+; 2                                               ; 7                             ;
+; 3                                               ; 5                             ;
+; 4                                               ; 6                             ;
 ; 5                                               ; 3                             ;
-; 6                                               ; 3                             ;
-; 7                                               ; 4                             ;
-; 8                                               ; 4                             ;
-; 9                                               ; 5                             ;
-; 10                                              ; 5                             ;
-; 11                                              ; 5                             ;
-; 12                                              ; 20                            ;
-; 13                                              ; 15                            ;
-; 14                                              ; 5                             ;
-; 15                                              ; 8                             ;
-; 16                                              ; 13                            ;
+; 6                                               ; 7                             ;
+; 7                                               ; 3                             ;
+; 8                                               ; 3                             ;
+; 9                                               ; 4                             ;
+; 10                                              ; 8                             ;
+; 11                                              ; 4                             ;
+; 12                                              ; 17                            ;
+; 13                                              ; 13                            ;
+; 14                                              ; 9                             ;
+; 15                                              ; 4                             ;
+; 16                                              ; 16                            ;
 ; 17                                              ; 0                             ;
 ; 18                                              ; 0                             ;
 ; 19                                              ; 0                             ;
@@ -1674,40 +1669,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Distinct Inputs  (Average = 15.27) ; Number of LABs  (Total = 121) ;
+; Number of Distinct Inputs  (Average = 15.46) ; Number of LABs  (Total = 121) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 0                             ;
-; 2                                            ; 7                             ;
-; 3                                            ; 8                             ;
+; 1                                            ; 1                             ;
+; 2                                            ; 5                             ;
+; 3                                            ; 6                             ;
 ; 4                                            ; 6                             ;
-; 5                                            ; 3                             ;
-; 6                                            ; 1                             ;
-; 7                                            ; 0                             ;
-; 8                                            ; 5                             ;
-; 9                                            ; 6                             ;
+; 5                                            ; 4                             ;
+; 6                                            ; 2                             ;
+; 7                                            ; 2                             ;
+; 8                                            ; 2                             ;
+; 9                                            ; 4                             ;
 ; 10                                           ; 3                             ;
-; 11                                           ; 2                             ;
-; 12                                           ; 3                             ;
-; 13                                           ; 11                            ;
-; 14                                           ; 4                             ;
+; 11                                           ; 6                             ;
+; 12                                           ; 5                             ;
+; 13                                           ; 9                             ;
+; 14                                           ; 1                             ;
 ; 15                                           ; 4                             ;
-; 16                                           ; 6                             ;
-; 17                                           ; 5                             ;
+; 16                                           ; 9                             ;
+; 17                                           ; 3                             ;
 ; 18                                           ; 2                             ;
-; 19                                           ; 1                             ;
-; 20                                           ; 3                             ;
-; 21                                           ; 2                             ;
-; 22                                           ; 5                             ;
-; 23                                           ; 3                             ;
-; 24                                           ; 6                             ;
-; 25                                           ; 0                             ;
-; 26                                           ; 4                             ;
-; 27                                           ; 13                            ;
+; 19                                           ; 3                             ;
+; 20                                           ; 6                             ;
+; 21                                           ; 3                             ;
+; 22                                           ; 2                             ;
+; 23                                           ; 2                             ;
+; 24                                           ; 3                             ;
+; 25                                           ; 3                             ;
+; 26                                           ; 2                             ;
+; 27                                           ; 14                            ;
 ; 28                                           ; 3                             ;
-; 29                                           ; 1                             ;
+; 29                                           ; 3                             ;
 ; 30                                           ; 0                             ;
-; 31                                           ; 2                             ;
+; 31                                           ; 1                             ;
 ; 32                                           ; 0                             ;
 ; 33                                           ; 1                             ;
 +----------------------------------------------+-------------------------------+
@@ -1842,8 +1837,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SW[7]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[8]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[9]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; GPIO[0]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; GPIO[2]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; GPIO[3]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; GPIO[4]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; GPIO[5]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; GPIO[6]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1876,8 +1871,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GPIO[33]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; GPIO[34]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; GPIO[35]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; GPIO[0]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; GPIO[1]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; GPIO[3]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; CLOCK_50           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; KEY[0]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
@@ -1924,7 +1919,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (119006): Selected device 10M50DAF484C6GES for design "Individual_Component_Test"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1950,7 +1945,7 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node CLOCK_50~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 11
+Info (176353): Automatically promoted node CLOCK_50~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 11
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G19
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -2034,7 +2029,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_R[3]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -2043,117 +2038,117 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 12% of the available device resources in the region that extends from location X33_Y22 to location X44_Y32
+    Info (170196): Router estimated peak interconnect usage is 10% of the available device resources in the region that extends from location X33_Y22 to location X44_Y32
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.37 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
+Info (11888): Total time spent on timing analysis during the Fitter is 0.43 seconds.
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 49 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing MAX 10 Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin KEY[1] uses I/O standard 3.3 V Schmitt Trigger at A7 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 25
-    Info (169178): Pin SW[0] uses I/O standard 3.3-V LVTTL at C10 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
-    Info (169178): Pin SW[1] uses I/O standard 3.3-V LVTTL at C11 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
-    Info (169178): Pin SW[2] uses I/O standard 3.3-V LVTTL at D12 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
-    Info (169178): Pin SW[3] uses I/O standard 3.3-V LVTTL at C12 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
-    Info (169178): Pin SW[4] uses I/O standard 3.3-V LVTTL at A12 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
-    Info (169178): Pin SW[5] uses I/O standard 3.3-V LVTTL at B12 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
-    Info (169178): Pin SW[6] uses I/O standard 3.3-V LVTTL at A13 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
-    Info (169178): Pin SW[7] uses I/O standard 3.3-V LVTTL at A14 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
-    Info (169178): Pin SW[8] uses I/O standard 3.3-V LVTTL at B14 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
-    Info (169178): Pin SW[9] uses I/O standard 3.3-V LVTTL at F15 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
-    Info (169178): Pin GPIO[2] uses I/O standard 3.3-V LVTTL at V9 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[3] uses I/O standard 3.3-V LVTTL at W9 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[4] uses I/O standard 3.3-V LVTTL at V8 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[5] uses I/O standard 3.3-V LVTTL at W8 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[6] uses I/O standard 3.3-V LVTTL at V7 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[7] uses I/O standard 3.3-V LVTTL at W7 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[8] uses I/O standard 3.3-V LVTTL at W6 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[9] uses I/O standard 3.3-V LVTTL at V5 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[10] uses I/O standard 3.3-V LVTTL at W5 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[11] uses I/O standard 3.3-V LVTTL at AA15 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[12] uses I/O standard 3.3-V LVTTL at AA14 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[13] uses I/O standard 3.3-V LVTTL at W13 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[14] uses I/O standard 3.3-V LVTTL at W12 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[15] uses I/O standard 3.3-V LVTTL at AB13 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[16] uses I/O standard 3.3-V LVTTL at AB12 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[17] uses I/O standard 3.3-V LVTTL at Y11 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[18] uses I/O standard 3.3-V LVTTL at AB11 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[19] uses I/O standard 3.3-V LVTTL at W11 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[20] uses I/O standard 3.3-V LVTTL at AB10 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[21] uses I/O standard 3.3-V LVTTL at AA10 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[22] uses I/O standard 3.3-V LVTTL at AA9 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[23] uses I/O standard 3.3-V LVTTL at Y8 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[24] uses I/O standard 3.3-V LVTTL at AA8 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[25] uses I/O standard 3.3-V LVTTL at Y7 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[26] uses I/O standard 3.3-V LVTTL at AA7 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[27] uses I/O standard 3.3-V LVTTL at Y6 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[28] uses I/O standard 3.3-V LVTTL at AA6 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[29] uses I/O standard 3.3-V LVTTL at Y5 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[30] uses I/O standard 3.3-V LVTTL at AA5 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[31] uses I/O standard 3.3-V LVTTL at Y4 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[32] uses I/O standard 3.3-V LVTTL at AB3 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[33] uses I/O standard 3.3-V LVTTL at Y3 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[34] uses I/O standard 3.3-V LVTTL at AB2 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[35] uses I/O standard 3.3-V LVTTL at AA2 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[0] uses I/O standard 3.3-V LVTTL at V10 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin GPIO[1] uses I/O standard 3.3-V LVTTL at W10 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at P11 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 11
-    Info (169178): Pin KEY[0] uses I/O standard 3.3 V Schmitt Trigger at B8 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 25
+    Info (169178): Pin KEY[1] uses I/O standard 3.3 V Schmitt Trigger at A7 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 25
+    Info (169178): Pin SW[0] uses I/O standard 3.3-V LVTTL at C10 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
+    Info (169178): Pin SW[1] uses I/O standard 3.3-V LVTTL at C11 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
+    Info (169178): Pin SW[2] uses I/O standard 3.3-V LVTTL at D12 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
+    Info (169178): Pin SW[3] uses I/O standard 3.3-V LVTTL at C12 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
+    Info (169178): Pin SW[4] uses I/O standard 3.3-V LVTTL at A12 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
+    Info (169178): Pin SW[5] uses I/O standard 3.3-V LVTTL at B12 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
+    Info (169178): Pin SW[6] uses I/O standard 3.3-V LVTTL at A13 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
+    Info (169178): Pin SW[7] uses I/O standard 3.3-V LVTTL at A14 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
+    Info (169178): Pin SW[8] uses I/O standard 3.3-V LVTTL at B14 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
+    Info (169178): Pin SW[9] uses I/O standard 3.3-V LVTTL at F15 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
+    Info (169178): Pin GPIO[0] uses I/O standard 3.3-V LVTTL at V10 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[2] uses I/O standard 3.3-V LVTTL at V9 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[4] uses I/O standard 3.3-V LVTTL at V8 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[5] uses I/O standard 3.3-V LVTTL at W8 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[6] uses I/O standard 3.3-V LVTTL at V7 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[7] uses I/O standard 3.3-V LVTTL at W7 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[8] uses I/O standard 3.3-V LVTTL at W6 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[9] uses I/O standard 3.3-V LVTTL at V5 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[10] uses I/O standard 3.3-V LVTTL at W5 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[11] uses I/O standard 3.3-V LVTTL at AA15 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[12] uses I/O standard 3.3-V LVTTL at AA14 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[13] uses I/O standard 3.3-V LVTTL at W13 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[14] uses I/O standard 3.3-V LVTTL at W12 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[15] uses I/O standard 3.3-V LVTTL at AB13 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[16] uses I/O standard 3.3-V LVTTL at AB12 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[17] uses I/O standard 3.3-V LVTTL at Y11 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[18] uses I/O standard 3.3-V LVTTL at AB11 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[19] uses I/O standard 3.3-V LVTTL at W11 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[20] uses I/O standard 3.3-V LVTTL at AB10 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[21] uses I/O standard 3.3-V LVTTL at AA10 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[22] uses I/O standard 3.3-V LVTTL at AA9 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[23] uses I/O standard 3.3-V LVTTL at Y8 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[24] uses I/O standard 3.3-V LVTTL at AA8 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[25] uses I/O standard 3.3-V LVTTL at Y7 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[26] uses I/O standard 3.3-V LVTTL at AA7 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[27] uses I/O standard 3.3-V LVTTL at Y6 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[28] uses I/O standard 3.3-V LVTTL at AA6 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[29] uses I/O standard 3.3-V LVTTL at Y5 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[30] uses I/O standard 3.3-V LVTTL at AA5 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[31] uses I/O standard 3.3-V LVTTL at Y4 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[32] uses I/O standard 3.3-V LVTTL at AB3 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[33] uses I/O standard 3.3-V LVTTL at Y3 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[34] uses I/O standard 3.3-V LVTTL at AB2 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[35] uses I/O standard 3.3-V LVTTL at AA2 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[1] uses I/O standard 3.3-V LVTTL at W10 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin GPIO[3] uses I/O standard 3.3-V LVTTL at W9 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at P11 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 11
+    Info (169178): Pin KEY[0] uses I/O standard 3.3 V Schmitt Trigger at B8 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 25
 Warning (169064): Following 36 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
-    Info (169065): Pin GPIO[2] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[3] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[4] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[5] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[6] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[7] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[8] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[9] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[10] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[11] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[12] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[13] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[14] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[15] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[16] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[17] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[18] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[19] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[20] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[21] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[22] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[23] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[24] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[25] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[26] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[27] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[28] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[29] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[30] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[31] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[32] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[33] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[34] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[35] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[0] has a permanently disabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Info (169065): Pin GPIO[1] has a permanently enabled output enable File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-Info (144001): Generated suppressed messages file C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/Individual_Component_Test.fit.smsg
+    Info (169065): Pin GPIO[0] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[2] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[4] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[5] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[6] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[7] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[8] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[9] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[10] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[11] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[12] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[13] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[14] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[15] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[16] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[17] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[18] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[19] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[20] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[21] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[22] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[23] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[24] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[25] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[26] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[27] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[28] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[29] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[30] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[31] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[32] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[33] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[34] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[35] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[1] has a permanently enabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Info (169065): Pin GPIO[3] has a permanently disabled output enable File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+Info (144001): Generated suppressed messages file C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/Individual_Component_Test.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 88 warnings
-    Info: Peak virtual memory: 6641 megabytes
-    Info: Processing ended: Tue Nov 25 19:04:12 2025
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 5654 megabytes
+    Info: Processing ended: Wed Nov 26 14:08:29 2025
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:19
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/Individual_Component_Test.fit.smsg.
+The suppressed messages can be found in C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/Individual_Component_Test.fit.smsg.
 
 

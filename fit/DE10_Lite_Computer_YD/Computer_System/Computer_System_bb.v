@@ -4,7 +4,6 @@ module Computer_System (
 	arduino_reset_n_export,
 	hex3_hex0_export,
 	hex5_hex4_export,
-	leds_export,
 	pushbuttons_export,
 	sdram_addr,
 	sdram_ba,
@@ -28,13 +27,15 @@ module Computer_System (
 	vga_G,
 	vga_B,
 	video_pll_ref_clk_clk,
-	video_pll_ref_reset_reset);	
+	video_pll_ref_reset_reset,
+	ip_telem_avalon_0_conduit_end_trig,
+	ip_telem_avalon_0_conduit_end_dist,
+	ip_telem_avalon_0_conduit_end_echo);	
 
 	inout	[15:0]	arduino_gpio_export;
 	output		arduino_reset_n_export;
 	output	[31:0]	hex3_hex0_export;
 	output	[15:0]	hex5_hex4_export;
-	output	[9:0]	leds_export;
 	input	[1:0]	pushbuttons_export;
 	output	[12:0]	sdram_addr;
 	output	[1:0]	sdram_ba;
@@ -59,4 +60,7 @@ module Computer_System (
 	output	[3:0]	vga_B;
 	input		video_pll_ref_clk_clk;
 	input		video_pll_ref_reset_reset;
+	output		ip_telem_avalon_0_conduit_end_trig;
+	output	[9:0]	ip_telem_avalon_0_conduit_end_dist;
+	input		ip_telem_avalon_0_conduit_end_echo;
 endmodule

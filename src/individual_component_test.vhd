@@ -42,11 +42,12 @@ TELEMETRE_US_inst : entity work.TELEMETRE_US
     port map (
         clk      => CLOCK_50,
         rst_n    => KEY(0),
-        echo     => GPIO(0),
+        echo     => GPIO(3),
         trig     => GPIO(1),
         dist_cm  => dist,
-		  read_n   => '0',
-		  readdata => open
+		read_n   => '0',
+		readdata => open,
+        chipselect => '1'
     );
 
 -- Display distance on HEX displays

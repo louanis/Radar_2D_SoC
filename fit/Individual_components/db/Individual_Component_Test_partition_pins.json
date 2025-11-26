@@ -128,11 +128,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "GPIO[0]",
+					"name" : "GPIO[1]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO[1]",
+					"name" : "GPIO[3]",
 					"strict" : false
 				},
 				{

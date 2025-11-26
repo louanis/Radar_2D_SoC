@@ -3,13 +3,10 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity servomoteur is
-    generic(
-        N : integer := 10
-    )
     port(
         clk      : in  std_logic;
         rst_n    : in  std_logic;
-        position : in  std_logic_vecor(N-1 downto 0);
+        position : in  integer;
         commande : out std_logic
     );
 end servomoteur ;
@@ -27,9 +24,10 @@ signal curr_state : state := PULSE;
 
 begin
 
-    up_dur <= 500 + 
+    
 
     process(clk, rst_n) is
+        
     begin
         if rst_n = '0' then
             cmp <= 0;
@@ -39,14 +37,17 @@ begin
             glob_cmp <= glob_cmp + 1;
             case curr_state is
                 when START_PULSE =>
+                    up_dur <= 500 + position*556;
                     glob_cmp <= 0;
                     cmp <= 0;
+                    commande <= '1';
                     curr_state <= PULSE;
                 when PULSE =>
                     if cmp < up_dur then
                         cmp <= cmp + 1;
                     else 
-                        curr_state <= DOWN
+                        curr_state <= DOWN;
+                        commande <= '0';
                     end if;
                 when DOWN => 
                     if glob_cmp = per then

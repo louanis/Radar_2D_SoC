@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="alt_sld_fab" kind="alt_sld_fab" version="1.0" fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2024.11.19.16:16:57 -->
+ <!-- 2025.11.26.15:17:42 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_DEVICE_FAMILY">
   <type>java.lang.String</type>
@@ -56,7 +56,7 @@
 the requested settings for a module instance. -->
   <parameter name="DESIGN_HASH">
    <type>java.lang.String</type>
-   <value>ba79b3a9428f52fb9f8a</value>
+   <value>b1af09ee4431fe4cb2f2</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -104,7 +104,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="EP_INFOS">
    <type>java.lang.String</type>
-   <value>{hpath {Computer_System:The_System|Computer_System_JTAG_UART:jtag_uart|alt_jtag_atlantic:Computer_System_JTAG_UART_alt_jtag_atlantic} } {hpath {Computer_System:The_System|Computer_System_JTAG_to_FPGA_Bridge:jtag_to_fpga_bridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst} } {hpath {Computer_System:The_System|Computer_System_Nios2:nios2|Computer_System_Nios2_cpu:cpu|Computer_System_Nios2_cpu_nios2_oci:the_Computer_System_Nios2_cpu_nios2_oci|Computer_System_Nios2_cpu_debug_slave_wrapper:the_Computer_System_Nios2_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:Computer_System_Nios2_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst} } </value>
+   <value>{hpath {Computer_System:u0|Computer_System_JTAG_UART:jtag_uart|alt_jtag_atlantic:Computer_System_JTAG_UART_alt_jtag_atlantic} } {hpath {Computer_System:u0|Computer_System_JTAG_to_FPGA_Bridge:jtag_to_fpga_bridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst} } {hpath {Computer_System:u0|Computer_System_Nios2:nios2|Computer_System_Nios2_cpu:cpu|Computer_System_Nios2_cpu_nios2_oci:the_Computer_System_Nios2_cpu_nios2_oci|Computer_System_Nios2_cpu_debug_slave_wrapper:the_Computer_System_Nios2_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:Computer_System_Nios2_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst} } </value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -2735,7 +2735,7 @@ parameters are a RESULT of the module parameters. -->
 the requested settings for a module instance. -->
   <parameter name="DESIGN_HASH">
    <type>java.lang.String</type>
-   <value>ba79b3a9428f52fb9f8a</value>
+   <value>b1af09ee4431fe4cb2f2</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>

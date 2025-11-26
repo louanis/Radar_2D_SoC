@@ -1,5 +1,5 @@
 
-State Machine - |individual_component_test|TELEMETRE_US:TELEMETRE_US_inst|curr_state
+State Machine - |individual_component_test|telemetre_us:TELEMETRE_US_inst|curr_state
 Name curr_state.WAIT_TRIGGER curr_state.CALC_DIST curr_state.WAIT_END_ECHO curr_state.WAIT_ECHO curr_state.TRIGGER 
 curr_state.TRIGGER 0 0 0 0 0 
 curr_state.WAIT_ECHO 0 0 0 1 1 

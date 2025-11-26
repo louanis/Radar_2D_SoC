@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Individual_Component_Test
-Tue Nov 25 19:04:03 2025
+Wed Nov 26 14:08:12 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,7 +13,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |individual_component_test|TELEMETRE_US:TELEMETRE_US_inst|curr_state
+  8. State Machine - |individual_component_test|telemetre_us:TELEMETRE_US_inst|curr_state
   9. General Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
  11. Parameter Settings for User Entity Instance: binary_to_sevseg_3dig:SEVSEG_inst
@@ -22,12 +22,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  14. Parameter Settings for Inferred Entity Instance: binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod1
  15. Parameter Settings for Inferred Entity Instance: binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Div1
  16. Parameter Settings for Inferred Entity Instance: binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod0
- 17. Parameter Settings for Inferred Entity Instance: TELEMETRE_US:TELEMETRE_US_inst|lpm_divide:Div0
+ 17. Parameter Settings for Inferred Entity Instance: telemetre_us:TELEMETRE_US_inst|lpm_divide:Div0
  18. Port Connectivity Checks: "binary_to_sevseg_3dig:SEVSEG_inst|SEVEN_SEG:U4"
  19. Port Connectivity Checks: "binary_to_sevseg_3dig:SEVSEG_inst|SEVEN_SEG:U3"
  20. Port Connectivity Checks: "binary_to_sevseg_3dig:SEVSEG_inst|SEVEN_SEG:U2"
  21. Port Connectivity Checks: "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1"
- 22. Port Connectivity Checks: "TELEMETRE_US:TELEMETRE_US_inst"
+ 22. Port Connectivity Checks: "telemetre_us:TELEMETRE_US_inst"
  23. Post-Synthesis Netlist Statistics for Top Partition
  24. Elapsed Time Per Partition
  25. Analysis & Synthesis Messages
@@ -56,7 +56,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 25 19:04:03 2025       ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 26 14:08:12 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Individual_Component_Test                   ;
 ; Top-level Entity Name              ; individual_component_test                   ;
@@ -166,57 +166,51 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processor 9            ;   0.0%      ;
-;     Processors 10-16       ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                           ;
-+-----------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path        ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                ; Library ;
-+-----------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
-; ../../src/Decimal_Digits.vhd            ; yes             ; User VHDL File               ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd                               ;         ;
-; ../../src/SEVEN_SEG.vhd                 ; yes             ; User VHDL File               ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/SEVEN_SEG.vhd                                    ;         ;
-; ../../src/binary_to_sevseg_3dig.vhd     ; yes             ; User VHDL File               ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/binary_to_sevseg_3dig.vhd                        ;         ;
-; ../../src/telemetre_us.vhd              ; yes             ; User VHDL File               ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd                                 ;         ;
-; ../../src/individual_component_test.vhd ; yes             ; User VHDL File               ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd                    ;         ;
-; lpm_divide.tdf                          ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf                                       ;         ;
-; abs_divider.inc                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc                                      ;         ;
-; sign_div_unsign.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                  ;         ;
-; aglobal181.inc                          ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                       ;         ;
-; db/lpm_divide_anl.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/lpm_divide_anl.tdf      ;         ;
-; db/sign_div_unsign_9nh.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/sign_div_unsign_9nh.tdf ;         ;
-; db/alt_u_div_ske.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_ske.tdf       ;         ;
-; db/add_sub_t3c.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/add_sub_t3c.tdf         ;         ;
-; db/add_sub_u3c.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/add_sub_u3c.tdf         ;         ;
-; db/lpm_divide_mtl.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/lpm_divide_mtl.tdf      ;         ;
-; db/sign_div_unsign_olh.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/sign_div_unsign_olh.tdf ;         ;
-; db/alt_u_div_qhe.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_qhe.tdf       ;         ;
-; db/lpm_divide_ptl.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/lpm_divide_ptl.tdf      ;         ;
-; db/sign_div_unsign_rlh.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/sign_div_unsign_rlh.tdf ;         ;
-; db/alt_u_div_0ie.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_0ie.tdf       ;         ;
-; db/lpm_divide_1do.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/lpm_divide_1do.tdf      ;         ;
-; db/abs_divider_6dg.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/abs_divider_6dg.tdf     ;         ;
-; db/alt_u_div_0le.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_0le.tdf       ;         ;
-; db/lpm_abs_ab9.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/lpm_abs_ab9.tdf         ;         ;
-; db/lpm_abs_8b9.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/lpm_abs_8b9.tdf         ;         ;
-+-----------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                   ;
++-----------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path        ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                        ; Library ;
++-----------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; ../../src/Decimal_Digits.vhd            ; yes             ; User VHDL File               ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/Decimal_Digits.vhd                               ;         ;
+; ../../src/SEVEN_SEG.vhd                 ; yes             ; User VHDL File               ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/SEVEN_SEG.vhd                                    ;         ;
+; ../../src/binary_to_sevseg_3dig.vhd     ; yes             ; User VHDL File               ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/binary_to_sevseg_3dig.vhd                        ;         ;
+; ../../src/telemetre_us.vhd              ; yes             ; User VHDL File               ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/telemetre_us.vhd                                 ;         ;
+; ../../src/individual_component_test.vhd ; yes             ; User VHDL File               ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd                    ;         ;
+; lpm_divide.tdf                          ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf                               ;         ;
+; abs_divider.inc                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc                              ;         ;
+; sign_div_unsign.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc                          ;         ;
+; aglobal181.inc                          ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                               ;         ;
+; db/lpm_divide_anl.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/lpm_divide_anl.tdf      ;         ;
+; db/sign_div_unsign_9nh.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/sign_div_unsign_9nh.tdf ;         ;
+; db/alt_u_div_ske.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_ske.tdf       ;         ;
+; db/add_sub_t3c.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/add_sub_t3c.tdf         ;         ;
+; db/add_sub_u3c.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/add_sub_u3c.tdf         ;         ;
+; db/lpm_divide_mtl.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/lpm_divide_mtl.tdf      ;         ;
+; db/sign_div_unsign_olh.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/sign_div_unsign_olh.tdf ;         ;
+; db/alt_u_div_qhe.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_qhe.tdf       ;         ;
+; db/lpm_divide_ptl.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/lpm_divide_ptl.tdf      ;         ;
+; db/sign_div_unsign_rlh.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/sign_div_unsign_rlh.tdf ;         ;
+; db/alt_u_div_0ie.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_0ie.tdf       ;         ;
+; db/lpm_divide_1do.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/lpm_divide_1do.tdf      ;         ;
+; db/abs_divider_6dg.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/abs_divider_6dg.tdf     ;         ;
+; db/alt_u_div_0le.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_0le.tdf       ;         ;
+; db/lpm_abs_ab9.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/lpm_abs_ab9.tdf         ;         ;
+; db/lpm_abs_8b9.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/lpm_abs_8b9.tdf         ;         ;
++-----------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -257,12 +251,6 @@ refer to the applicable agreement for further details.
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                            ; Entity Name               ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
 ; |individual_component_test                   ; 1555 (0)            ; 112 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 107  ; 0            ; 0          ; |individual_component_test                                                                                                                                                     ; individual_component_test ; work         ;
-;    |TELEMETRE_US:TELEMETRE_US_inst|          ; 1037 (193)          ; 112 (112)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |individual_component_test|TELEMETRE_US:TELEMETRE_US_inst                                                                                                                      ; TELEMETRE_US              ; work         ;
-;       |lpm_divide:Div0|                      ; 844 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |individual_component_test|TELEMETRE_US:TELEMETRE_US_inst|lpm_divide:Div0                                                                                                      ; lpm_divide                ; work         ;
-;          |lpm_divide_1do:auto_generated|     ; 844 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |individual_component_test|TELEMETRE_US:TELEMETRE_US_inst|lpm_divide:Div0|lpm_divide_1do:auto_generated                                                                        ; lpm_divide_1do            ; work         ;
-;             |abs_divider_6dg:divider|        ; 844 (20)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |individual_component_test|TELEMETRE_US:TELEMETRE_US_inst|lpm_divide:Div0|lpm_divide_1do:auto_generated|abs_divider_6dg:divider                                                ; abs_divider_6dg           ; work         ;
-;                |alt_u_div_0le:divider|       ; 777 (777)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |individual_component_test|TELEMETRE_US:TELEMETRE_US_inst|lpm_divide:Div0|lpm_divide_1do:auto_generated|abs_divider_6dg:divider|alt_u_div_0le:divider                          ; alt_u_div_0le             ; work         ;
-;                |lpm_abs_8b9:my_abs_num|      ; 47 (47)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |individual_component_test|TELEMETRE_US:TELEMETRE_US_inst|lpm_divide:Div0|lpm_divide_1do:auto_generated|abs_divider_6dg:divider|lpm_abs_8b9:my_abs_num                         ; lpm_abs_8b9               ; work         ;
 ;    |binary_to_sevseg_3dig:SEVSEG_inst|       ; 518 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |individual_component_test|binary_to_sevseg_3dig:SEVSEG_inst                                                                                                                   ; binary_to_sevseg_3dig     ; work         ;
 ;       |Decimal_Digits:U1|                    ; 497 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |individual_component_test|binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1                                                                                                 ; Decimal_Digits            ; work         ;
 ;          |lpm_divide:Div1|                   ; 70 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |individual_component_test|binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Div1                                                                                 ; lpm_divide                ; work         ;
@@ -288,13 +276,19 @@ refer to the applicable agreement for further details.
 ;       |SEVEN_SEG:U2|                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |individual_component_test|binary_to_sevseg_3dig:SEVSEG_inst|SEVEN_SEG:U2                                                                                                      ; SEVEN_SEG                 ; work         ;
 ;       |SEVEN_SEG:U3|                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |individual_component_test|binary_to_sevseg_3dig:SEVSEG_inst|SEVEN_SEG:U3                                                                                                      ; SEVEN_SEG                 ; work         ;
 ;       |SEVEN_SEG:U4|                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |individual_component_test|binary_to_sevseg_3dig:SEVSEG_inst|SEVEN_SEG:U4                                                                                                      ; SEVEN_SEG                 ; work         ;
+;    |telemetre_us:TELEMETRE_US_inst|          ; 1037 (193)          ; 112 (112)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |individual_component_test|telemetre_us:TELEMETRE_US_inst                                                                                                                      ; telemetre_us              ; work         ;
+;       |lpm_divide:Div0|                      ; 844 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |individual_component_test|telemetre_us:TELEMETRE_US_inst|lpm_divide:Div0                                                                                                      ; lpm_divide                ; work         ;
+;          |lpm_divide_1do:auto_generated|     ; 844 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |individual_component_test|telemetre_us:TELEMETRE_US_inst|lpm_divide:Div0|lpm_divide_1do:auto_generated                                                                        ; lpm_divide_1do            ; work         ;
+;             |abs_divider_6dg:divider|        ; 844 (20)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |individual_component_test|telemetre_us:TELEMETRE_US_inst|lpm_divide:Div0|lpm_divide_1do:auto_generated|abs_divider_6dg:divider                                                ; abs_divider_6dg           ; work         ;
+;                |alt_u_div_0le:divider|       ; 777 (777)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |individual_component_test|telemetre_us:TELEMETRE_US_inst|lpm_divide:Div0|lpm_divide_1do:auto_generated|abs_divider_6dg:divider|alt_u_div_0le:divider                          ; alt_u_div_0le             ; work         ;
+;                |lpm_abs_8b9:my_abs_num|      ; 47 (47)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |individual_component_test|telemetre_us:TELEMETRE_US_inst|lpm_divide:Div0|lpm_divide_1do:auto_generated|abs_divider_6dg:divider|lpm_abs_8b9:my_abs_num                         ; lpm_abs_8b9               ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |individual_component_test|TELEMETRE_US:TELEMETRE_US_inst|curr_state                                                             ;
+; State Machine - |individual_component_test|telemetre_us:TELEMETRE_US_inst|curr_state                                                             ;
 +--------------------------+-------------------------+----------------------+--------------------------+----------------------+--------------------+
 ; Name                     ; curr_state.WAIT_TRIGGER ; curr_state.CALC_DIST ; curr_state.WAIT_END_ECHO ; curr_state.WAIT_ECHO ; curr_state.TRIGGER ;
 +--------------------------+-------------------------+----------------------+--------------------------+----------------------+--------------------+
@@ -326,8 +320,8 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------+
-; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |individual_component_test|TELEMETRE_US:TELEMETRE_US_inst|cmpt_echo[1]            ;
-; 10:1               ; 5 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |individual_component_test|TELEMETRE_US:TELEMETRE_US_inst|curr_state.WAIT_TRIGGER ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |individual_component_test|telemetre_us:TELEMETRE_US_inst|cmpt_echo[1]            ;
+; 10:1               ; 5 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |individual_component_test|telemetre_us:TELEMETRE_US_inst|curr_state.WAIT_TRIGGER ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------+
 
 
@@ -457,7 +451,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: TELEMETRE_US:TELEMETRE_US_inst|lpm_divide:Div0 ;
+; Parameter Settings for Inferred Entity Instance: telemetre_us:TELEMETRE_US_inst|lpm_divide:Div0 ;
 +------------------------+----------------+-------------------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                                  ;
 +------------------------+----------------+-------------------------------------------------------+
@@ -516,14 +510,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "TELEMETRE_US:TELEMETRE_US_inst"                                                         ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; read_n   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; readdata ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "telemetre_us:TELEMETRE_US_inst"                                                           ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; read_n     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; chipselect ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; readdata   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -559,7 +554,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -569,210 +564,211 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 25 19:03:51 2025
+    Info: Processing started: Wed Nov 26 14:07:57 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Individual_Component_Test -c Individual_Component_Test
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /users/yanis/documents/cours/projet_soc/radar_2d_soc/src/decimal_digits.vhd
-    Info (12022): Found design unit 1: Decimal_Digits-Behavioral File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 15
-    Info (12023): Found entity 1: Decimal_Digits File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file /users/yanis/documents/cours/projet_soc/radar_2d_soc/src/seven_seg.vhd
-    Info (12022): Found design unit 1: SEVEN_SEG-COMB File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/SEVEN_SEG.vhd Line: 39
-    Info (12023): Found entity 1: SEVEN_SEG File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/SEVEN_SEG.vhd Line: 31
-Info (12021): Found 2 design units, including 1 entities, in source file /users/yanis/documents/cours/projet_soc/radar_2d_soc/src/binary_to_sevseg_3dig.vhd
-    Info (12022): Found design unit 1: binary_to_sevseg_3dig-Behavioral File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/binary_to_sevseg_3dig.vhd Line: 20
-    Info (12023): Found entity 1: binary_to_sevseg_3dig File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/binary_to_sevseg_3dig.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file /users/yanis/documents/cours/projet_soc/radar_2d_soc/src/telemetre_us.vhd
-    Info (12022): Found design unit 1: TELEMETRE_US-rtl File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 18
-    Info (12023): Found entity 1: TELEMETRE_US File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file /users/yanis/documents/cours/projet_soc/radar_2d_soc/src/individual_component_test.vhd
-    Info (12022): Found design unit 1: individual_component_test-Behavioral File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 35
-    Info (12023): Found entity 1: individual_component_test File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 9
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /users/yanis/cours/4a/s7/soc s7/radar_2d_soc/src/decimal_digits.vhd
+    Info (12022): Found design unit 1: Decimal_Digits-Behavioral File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 15
+    Info (12023): Found entity 1: Decimal_Digits File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/yanis/cours/4a/s7/soc s7/radar_2d_soc/src/seven_seg.vhd
+    Info (12022): Found design unit 1: SEVEN_SEG-COMB File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/SEVEN_SEG.vhd Line: 39
+    Info (12023): Found entity 1: SEVEN_SEG File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/SEVEN_SEG.vhd Line: 31
+Info (12021): Found 2 design units, including 1 entities, in source file /users/yanis/cours/4a/s7/soc s7/radar_2d_soc/src/binary_to_sevseg_3dig.vhd
+    Info (12022): Found design unit 1: binary_to_sevseg_3dig-Behavioral File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/binary_to_sevseg_3dig.vhd Line: 20
+    Info (12023): Found entity 1: binary_to_sevseg_3dig File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/binary_to_sevseg_3dig.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/yanis/cours/4a/s7/soc s7/radar_2d_soc/src/telemetre_us.vhd
+    Info (12022): Found design unit 1: telemetre_us-rtl File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/telemetre_us.vhd Line: 19
+    Info (12023): Found entity 1: telemetre_us File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/telemetre_us.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/yanis/cours/4a/s7/soc s7/radar_2d_soc/src/individual_component_test.vhd
+    Info (12022): Found design unit 1: individual_component_test-Behavioral File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 35
+    Info (12023): Found entity 1: individual_component_test File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 9
 Info (12127): Elaborating entity "individual_component_test" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at individual_component_test.vhd(20): used implicit default value for signal "HEX3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 20
-Warning (10541): VHDL Signal Declaration warning at individual_component_test.vhd(21): used implicit default value for signal "HEX4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 21
-Warning (10541): VHDL Signal Declaration warning at individual_component_test.vhd(22): used implicit default value for signal "HEX5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 22
-Warning (10873): Using initial value X (don't care) for net "HEX0[7]" at individual_component_test.vhd(17) File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 17
-Warning (10873): Using initial value X (don't care) for net "HEX1[7]" at individual_component_test.vhd(18) File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 18
-Warning (10873): Using initial value X (don't care) for net "HEX2[7]" at individual_component_test.vhd(19) File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 19
-Info (12128): Elaborating entity "TELEMETRE_US" for hierarchy "TELEMETRE_US:TELEMETRE_US_inst" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 41
-Warning (10036): Verilog HDL or VHDL warning at telemetre_us.vhd(33): object "result" assigned a value but never read File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 33
-Warning (10492): VHDL Process Statement warning at telemetre_us.vhd(40): signal "Read_n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 40
-Warning (10492): VHDL Process Statement warning at telemetre_us.vhd(41): signal "cmpt_echo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 41
-Info (12128): Elaborating entity "binary_to_sevseg_3dig" for hierarchy "binary_to_sevseg_3dig:SEVSEG_inst" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 54
-Info (12128): Elaborating entity "Decimal_Digits" for hierarchy "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/binary_to_sevseg_3dig.vhd Line: 50
-Info (12128): Elaborating entity "SEVEN_SEG" for hierarchy "binary_to_sevseg_3dig:SEVSEG_inst|SEVEN_SEG:U2" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/binary_to_sevseg_3dig.vhd Line: 60
+Warning (10541): VHDL Signal Declaration warning at individual_component_test.vhd(20): used implicit default value for signal "HEX3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 20
+Warning (10541): VHDL Signal Declaration warning at individual_component_test.vhd(21): used implicit default value for signal "HEX4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 21
+Warning (10541): VHDL Signal Declaration warning at individual_component_test.vhd(22): used implicit default value for signal "HEX5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 22
+Warning (10873): Using initial value X (don't care) for net "HEX0[7]" at individual_component_test.vhd(17) File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 17
+Warning (10873): Using initial value X (don't care) for net "HEX1[7]" at individual_component_test.vhd(18) File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 18
+Warning (10873): Using initial value X (don't care) for net "HEX2[7]" at individual_component_test.vhd(19) File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 19
+Info (12128): Elaborating entity "telemetre_us" for hierarchy "telemetre_us:TELEMETRE_US_inst" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 41
+Warning (10036): Verilog HDL or VHDL warning at telemetre_us.vhd(34): object "result" assigned a value but never read File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/telemetre_us.vhd Line: 34
+Warning (10492): VHDL Process Statement warning at telemetre_us.vhd(43): signal "Read_n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/telemetre_us.vhd Line: 43
+Warning (10492): VHDL Process Statement warning at telemetre_us.vhd(43): signal "chipselect" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/telemetre_us.vhd Line: 43
+Warning (10492): VHDL Process Statement warning at telemetre_us.vhd(44): signal "readdata_inter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/telemetre_us.vhd Line: 44
+Info (12128): Elaborating entity "binary_to_sevseg_3dig" for hierarchy "binary_to_sevseg_3dig:SEVSEG_inst" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 55
+Info (12128): Elaborating entity "Decimal_Digits" for hierarchy "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/binary_to_sevseg_3dig.vhd Line: 50
+Info (12128): Elaborating entity "SEVEN_SEG" for hierarchy "binary_to_sevseg_3dig:SEVSEG_inst|SEVEN_SEG:U2" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/binary_to_sevseg_3dig.vhd Line: 60
 Info (278001): Inferred 6 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|Mod2" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 23
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|Div2" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 22
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|Mod1" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 22
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|Div1" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 21
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|Mod0" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 21
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "TELEMETRE_US:TELEMETRE_US_inst|Div0" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 76
-Info (12130): Elaborated megafunction instantiation "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod2" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 23
-Info (12133): Instantiated megafunction "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod2" with the following parameter: File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 23
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|Mod2" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 23
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|Div2" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|Mod1" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|Div1" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 21
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|Mod0" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 21
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "telemetre_us:TELEMETRE_US_inst|Div0" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/telemetre_us.vhd Line: 79
+Info (12130): Elaborated megafunction instantiation "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod2" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 23
+Info (12133): Instantiated megafunction "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod2" with the following parameter: File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 23
     Info (12134): Parameter "LPM_WIDTHN" = "14"
     Info (12134): Parameter "LPM_WIDTHD" = "14"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_anl.tdf
-    Info (12023): Found entity 1: lpm_divide_anl File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/lpm_divide_anl.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_anl File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/lpm_divide_anl.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_9nh File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/sign_div_unsign_9nh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_9nh File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/sign_div_unsign_9nh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ske.tdf
-    Info (12023): Found entity 1: alt_u_div_ske File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_ske.tdf Line: 26
+    Info (12023): Found entity 1: alt_u_div_ske File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_ske.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
-    Info (12023): Found entity 1: add_sub_t3c File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/add_sub_t3c.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_t3c File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/add_sub_t3c.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
-    Info (12023): Found entity 1: add_sub_u3c File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/add_sub_u3c.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Div2" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 22
-Info (12133): Instantiated megafunction "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Div2" with the following parameter: File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 22
+    Info (12023): Found entity 1: add_sub_u3c File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/add_sub_u3c.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Div2" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 22
+Info (12133): Instantiated megafunction "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Div2" with the following parameter: File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 22
     Info (12134): Parameter "LPM_WIDTHN" = "14"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_mtl.tdf
-    Info (12023): Found entity 1: lpm_divide_mtl File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/lpm_divide_mtl.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_mtl File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/lpm_divide_mtl.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_olh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_olh File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/sign_div_unsign_olh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_olh File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/sign_div_unsign_olh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qhe.tdf
-    Info (12023): Found entity 1: alt_u_div_qhe File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_qhe.tdf Line: 26
-Info (12130): Elaborated megafunction instantiation "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod1" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 22
-Info (12133): Instantiated megafunction "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod1" with the following parameter: File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 22
+    Info (12023): Found entity 1: alt_u_div_qhe File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_qhe.tdf Line: 26
+Info (12130): Elaborated megafunction instantiation "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod1" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 22
+Info (12133): Instantiated megafunction "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod1" with the following parameter: File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 22
     Info (12134): Parameter "LPM_WIDTHN" = "14"
     Info (12134): Parameter "LPM_WIDTHD" = "14"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Div1" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 21
-Info (12133): Instantiated megafunction "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Div1" with the following parameter: File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 21
+Info (12130): Elaborated megafunction instantiation "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Div1" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 21
+Info (12133): Instantiated megafunction "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Div1" with the following parameter: File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/Decimal_Digits.vhd Line: 21
     Info (12134): Parameter "LPM_WIDTHN" = "14"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ptl.tdf
-    Info (12023): Found entity 1: lpm_divide_ptl File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/lpm_divide_ptl.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_ptl File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/lpm_divide_ptl.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_rlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_rlh File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/sign_div_unsign_rlh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_rlh File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/sign_div_unsign_rlh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_0ie.tdf
-    Info (12023): Found entity 1: alt_u_div_0ie File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_0ie.tdf Line: 26
-Info (12130): Elaborated megafunction instantiation "TELEMETRE_US:TELEMETRE_US_inst|lpm_divide:Div0" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 76
-Info (12133): Instantiated megafunction "TELEMETRE_US:TELEMETRE_US_inst|lpm_divide:Div0" with the following parameter: File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/telemetre_us.vhd Line: 76
+    Info (12023): Found entity 1: alt_u_div_0ie File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_0ie.tdf Line: 26
+Info (12130): Elaborated megafunction instantiation "telemetre_us:TELEMETRE_US_inst|lpm_divide:Div0" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/telemetre_us.vhd Line: 79
+Info (12133): Instantiated megafunction "telemetre_us:TELEMETRE_US_inst|lpm_divide:Div0" with the following parameter: File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/telemetre_us.vhd Line: 79
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "16"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_1do.tdf
-    Info (12023): Found entity 1: lpm_divide_1do File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/lpm_divide_1do.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_1do File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/lpm_divide_1do.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_6dg.tdf
-    Info (12023): Found entity 1: abs_divider_6dg File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/abs_divider_6dg.tdf Line: 28
+    Info (12023): Found entity 1: abs_divider_6dg File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/abs_divider_6dg.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_0le.tdf
-    Info (12023): Found entity 1: alt_u_div_0le File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_0le.tdf Line: 26
+    Info (12023): Found entity 1: alt_u_div_0le File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_0le.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_ab9.tdf
-    Info (12023): Found entity 1: lpm_abs_ab9 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/lpm_abs_ab9.tdf Line: 24
+    Info (12023): Found entity 1: lpm_abs_ab9 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/lpm_abs_ab9.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_8b9.tdf
-    Info (12023): Found entity 1: lpm_abs_8b9 File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/lpm_abs_8b9.tdf Line: 24
+    Info (12023): Found entity 1: lpm_abs_8b9 File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/lpm_abs_8b9.tdf Line: 24
 Info (13014): Ignored 31 buffer(s)
     Info (13016): Ignored 31 CARRY_SUM buffer(s)
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
-    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[1]" and its non-tri-state driver. File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[1]" and its non-tri-state driver. File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "GPIO[0]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[2]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[3]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[4]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[5]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[6]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[7]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[8]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[9]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[10]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[11]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[12]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[13]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[14]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[15]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[16]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[17]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[18]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[19]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[20]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[21]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[22]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[23]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[24]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[25]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[26]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[27]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[28]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[29]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[30]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[31]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[32]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[33]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[34]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
-    Warning (13040): bidirectional pin "GPIO[35]" has no driver File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[3]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[0]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[2]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[4]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[5]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[6]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[7]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[8]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[9]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[10]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[11]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[12]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[13]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[14]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[15]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[16]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[17]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[18]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[19]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[20]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[21]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[22]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[23]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[24]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[25]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[26]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[27]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[28]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[29]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[30]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[31]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[32]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[33]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[34]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13040): bidirectional pin "GPIO[35]" has no driver File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
 Warning (13009): TRI or OPNDRN buffers permanently enabled
-    Warning (13010): Node "GPIO[1]~synth" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
+    Warning (13010): Node "GPIO[1]~synth" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 14
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[7]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 17
-    Warning (13410): Pin "HEX1[7]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 18
-    Warning (13410): Pin "HEX2[7]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 19
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 20
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 20
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 20
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 20
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 20
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 20
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 20
-    Warning (13410): Pin "HEX3[7]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 20
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 21
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 21
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 21
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 21
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 21
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 21
-    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 21
-    Warning (13410): Pin "HEX4[7]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 21
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 22
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 22
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 22
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 22
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 22
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 22
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 22
-    Warning (13410): Pin "HEX5[7]" is stuck at GND File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 22
+    Warning (13410): Pin "HEX0[7]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 17
+    Warning (13410): Pin "HEX1[7]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 18
+    Warning (13410): Pin "HEX2[7]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 19
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 20
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 20
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 20
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 20
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 20
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 20
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 20
+    Warning (13410): Pin "HEX3[7]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 20
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 21
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 21
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 21
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 21
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 21
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 21
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 21
+    Warning (13410): Pin "HEX4[7]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 21
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 22
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 22
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 22
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 22
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 22
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 22
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 22
+    Warning (13410): Pin "HEX5[7]" is stuck at GND File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 22
 Info (286030): Timing-Driven Synthesis is running
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod1|lpm_divide_anl:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_ske:divider|add_sub_10_result_int[0]~22" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_ske.tdf Line: 36
-    Info (17048): Logic cell "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod1|lpm_divide_anl:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_ske:divider|add_sub_11_result_int[0]~24" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_ske.tdf Line: 41
-    Info (17048): Logic cell "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod1|lpm_divide_anl:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_ske:divider|add_sub_12_result_int[0]~26" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_ske.tdf Line: 46
-    Info (17048): Logic cell "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod1|lpm_divide_anl:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_ske:divider|add_sub_13_result_int[0]~28" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_ske.tdf Line: 51
-    Info (17048): Logic cell "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Div1|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_0ie:divider|add_sub_10_result_int[1]~14" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_0ie.tdf Line: 36
-    Info (17048): Logic cell "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod0|lpm_divide_anl:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_ske:divider|add_sub_13_result_int[0]~28" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_ske.tdf Line: 51
+    Info (17048): Logic cell "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod1|lpm_divide_anl:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_ske:divider|add_sub_10_result_int[0]~22" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_ske.tdf Line: 36
+    Info (17048): Logic cell "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod1|lpm_divide_anl:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_ske:divider|add_sub_11_result_int[0]~24" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_ske.tdf Line: 41
+    Info (17048): Logic cell "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod1|lpm_divide_anl:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_ske:divider|add_sub_12_result_int[0]~26" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_ske.tdf Line: 46
+    Info (17048): Logic cell "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod1|lpm_divide_anl:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_ske:divider|add_sub_13_result_int[0]~28" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_ske.tdf Line: 51
+    Info (17048): Logic cell "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Div1|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_0ie:divider|add_sub_10_result_int[1]~14" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_0ie.tdf Line: 36
+    Info (17048): Logic cell "binary_to_sevseg_3dig:SEVSEG_inst|Decimal_Digits:U1|lpm_divide:Mod0|lpm_divide_anl:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_ske:divider|add_sub_13_result_int[0]~28" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/fit/Individual_components/db/alt_u_div_ske.tdf Line: 51
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 11 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 25
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Yanis/Documents/Cours/Projet_SoC/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 25
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/yanis/Cours/4A/S7/SoC S7/Radar_2D_SoC/src/individual_component_test.vhd Line: 31
 Info (21057): Implemented 1664 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 58 output pins
     Info (21060): Implemented 36 bidirectional pins
     Info (21061): Implemented 1557 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 90 warnings
-    Info: Peak virtual memory: 4891 megabytes
-    Info: Processing ended: Tue Nov 25 19:04:03 2025
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:16
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 91 warnings
+    Info: Peak virtual memory: 4843 megabytes
+    Info: Processing ended: Wed Nov 26 14:08:12 2025
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:21
 
 

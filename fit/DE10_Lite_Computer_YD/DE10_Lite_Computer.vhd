@@ -69,37 +69,42 @@ architecture Behavioral of DE10_Lite_Computer is
     signal hex5_hex4 : std_logic_vector(15 downto 0);
 	 signal sdram_dqm : std_logic_vector(1 downto 0);
 	 
-	  component Computer_System is
+
+	 
+	 
+	 component Computer_System is
         port (
-            arduino_gpio_export         : inout std_logic_vector(15 downto 0) := (others => 'X'); -- export
-            arduino_reset_n_export      : out   std_logic;                                        -- export
-            hex3_hex0_export            : out   std_logic_vector(31 downto 0);                    -- export
-            hex5_hex4_export            : out   std_logic_vector(15 downto 0);                    -- export
-            leds_export                 : out   std_logic_vector(9 downto 0);                     -- export
-            pushbuttons_export          : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- export
-            sdram_addr                  : out   std_logic_vector(12 downto 0);                    -- addr
-            sdram_ba                    : out   std_logic_vector(1 downto 0);                     -- ba
-            sdram_cas_n                 : out   std_logic;                                        -- cas_n
-            sdram_cke                   : out   std_logic;                                        -- cke
-            sdram_cs_n                  : out   std_logic;                                        -- cs_n
-            sdram_dq                    : inout std_logic_vector(15 downto 0) := (others => 'X'); -- dq
-            sdram_dqm                   : out   std_logic_vector(1 downto 0);                     -- dqm
-            sdram_ras_n                 : out   std_logic;                                        -- ras_n
-            sdram_we_n                  : out   std_logic;                                        -- we_n
-            sdram_clk_clk               : out   std_logic;                                        -- clk
-            slider_switches_export      : in    std_logic_vector(9 downto 0)  := (others => 'X'); -- export
-            system_pll_ref_clk_clk      : in    std_logic                     := 'X';             -- clk
-            system_pll_ref_reset_reset  : in    std_logic                     := 'X';             -- reset
-            vga_CLK                     : out   std_logic;                                        -- CLK
-            vga_HS                      : out   std_logic;                                        -- HS
-            vga_VS                      : out   std_logic;                                        -- VS
-            vga_BLANK                   : out   std_logic;                                        -- BLANK
-            vga_SYNC                    : out   std_logic;                                        -- SYNC
-            vga_R                       : out   std_logic_vector(3 downto 0);                     -- R
-            vga_G                       : out   std_logic_vector(3 downto 0);                     -- G
-            vga_B                       : out   std_logic_vector(3 downto 0);                     -- B
-            video_pll_ref_clk_clk       : in    std_logic                     := 'X';             -- clk
-            video_pll_ref_reset_reset   : in    std_logic                     := 'X'              -- reset
+            arduino_gpio_export                : inout std_logic_vector(15 downto 0) := (others => 'X'); -- export
+            arduino_reset_n_export             : out   std_logic;                                        -- export
+            hex3_hex0_export                   : out   std_logic_vector(31 downto 0);                    -- export
+            hex5_hex4_export                   : out   std_logic_vector(15 downto 0);                    -- export
+            pushbuttons_export                 : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- export
+            sdram_addr                         : out   std_logic_vector(12 downto 0);                    -- addr
+            sdram_ba                           : out   std_logic_vector(1 downto 0);                     -- ba
+            sdram_cas_n                        : out   std_logic;                                        -- cas_n
+            sdram_cke                          : out   std_logic;                                        -- cke
+            sdram_cs_n                         : out   std_logic;                                        -- cs_n
+            sdram_dq                           : inout std_logic_vector(15 downto 0) := (others => 'X'); -- dq
+            sdram_dqm                          : out   std_logic_vector(1 downto 0);                     -- dqm
+            sdram_ras_n                        : out   std_logic;                                        -- ras_n
+            sdram_we_n                         : out   std_logic;                                        -- we_n
+            sdram_clk_clk                      : out   std_logic;                                        -- clk
+            slider_switches_export             : in    std_logic_vector(9 downto 0)  := (others => 'X'); -- export
+            system_pll_ref_clk_clk             : in    std_logic                     := 'X';             -- clk
+            system_pll_ref_reset_reset         : in    std_logic                     := 'X';             -- reset
+            vga_CLK                            : out   std_logic;                                        -- CLK
+            vga_HS                             : out   std_logic;                                        -- HS
+            vga_VS                             : out   std_logic;                                        -- VS
+            vga_BLANK                          : out   std_logic;                                        -- BLANK
+            vga_SYNC                           : out   std_logic;                                        -- SYNC
+            vga_R                              : out   std_logic_vector(3 downto 0);                     -- R
+            vga_G                              : out   std_logic_vector(3 downto 0);                     -- G
+            vga_B                              : out   std_logic_vector(3 downto 0);                     -- B
+            video_pll_ref_clk_clk              : in    std_logic                     := 'X';             -- clk
+            video_pll_ref_reset_reset          : in    std_logic                     := 'X';             -- reset
+            ip_telem_avalon_0_conduit_end_trig : out   std_logic;                                        -- trig
+            ip_telem_avalon_0_conduit_end_dist : out   std_logic_vector(9 downto 0);                     -- dist
+            ip_telem_avalon_0_conduit_end_echo : in    std_logic                     := 'X'              -- echo
         );
     end component Computer_System;
 	 
@@ -117,54 +122,44 @@ begin
     HEX4 <= not hex5_hex4(7 downto 0);
     HEX5 <= not hex5_hex4(15 downto 8);
 
-    The_System : component Computer_System port map (
-            -- Global signals
-            system_pll_ref_clk_clk    => CLOCK_50,
-            system_pll_ref_reset_reset => '0',
-            video_pll_ref_clk_clk     => CLOCK2_50,
-            video_pll_ref_reset_reset => '0',
-
-            -- Arduino GPIO
-            arduino_gpio_export       => ARDUINO_IO,
-
-            -- Arduino Reset_n
-            arduino_reset_n_export    => ARDUINO_RESET_N,
-
-            -- Slider Switches
-            slider_switches_export    => SW,
-
-            -- Pushbuttons
-            pushbuttons_export        => not KEY(1 downto 0),
-				
-            -- LEDs
-            leds_export               => LEDR,
-
-            -- Seven Segments
-            hex3_hex0_export          => hex3_hex0,
-            hex5_hex4_export          => hex5_hex4,
-
-            -- VGA Subsystem
-            vga_CLK                   => open,
-            vga_BLANK                 => open,
-            vga_SYNC                  => open,
-            vga_HS                    => VGA_HS,
-            vga_VS                    => VGA_VS,
-            vga_R                     => VGA_R,
-            vga_G                     => VGA_G,
-            vga_B                     => VGA_B,
-
-            -- SDRAM
-            sdram_clk_clk             => DRAM_CLK,
-            sdram_addr                => DRAM_ADDR,
-            sdram_ba                  => DRAM_BA,
-            sdram_cas_n               => DRAM_CAS_N,
-            sdram_cke                 => DRAM_CKE,
-            sdram_cs_n                => DRAM_CS_N,
-            sdram_dq                  => DRAM_DQ,
-            sdram_dqm                 => sdram_dqm, 
-            sdram_ras_n               => DRAM_RAS_N,
-            sdram_we_n                => DRAM_WE_N
+  
+		  
+		  u0 : component Computer_System
+        port map (
+            arduino_gpio_export                => ARDUINO_IO,                --                  arduino_gpio.export
+            arduino_reset_n_export             => ARDUINO_RESET_N,             --               arduino_reset_n.export
+            hex3_hex0_export                   => hex3_hex0,                   --                     hex3_hex0.export
+            hex5_hex4_export                   => hex5_hex4,                   --                     hex5_hex4.export
+            pushbuttons_export                 => not KEY(1 downto 0),                 --                   pushbuttons.export
+            sdram_addr                         => DRAM_ADDR,                         --                         sdram.addr
+            sdram_ba                           => DRAM_BA,                           --                              .ba
+            sdram_cas_n                        => DRAM_CAS_N,                        --                              .cas_n
+            sdram_cke                          => DRAM_CKE,                          --                              .cke
+            sdram_cs_n                         => DRAM_CS_N,                         --                              .cs_n
+            sdram_dq                           => DRAM_DQ,                           --                              .dq
+            sdram_dqm                          => sdram_dqm,                          --                              .dqm
+            sdram_ras_n                        => DRAM_RAS_N,                        --                              .ras_n
+            sdram_we_n                         => DRAM_WE_N,                         --                              .we_n
+            sdram_clk_clk                      => DRAM_CLK,                      --                     sdram_clk.clk
+            slider_switches_export             => SW,             --               slider_switches.export
+            system_pll_ref_clk_clk             => CLOCK_50,             --            system_pll_ref_clk.clk
+            system_pll_ref_reset_reset         =>  '0',         --          system_pll_ref_reset.reset
+            vga_CLK                            => open,                            --                           vga.CLK
+            vga_HS                             => vga_HS,                             --                              .HS
+            vga_VS                             => vga_VS,                             --                              .VS
+            vga_BLANK                          => open,                          --                              .BLANK
+            vga_SYNC                           => open,                           --                              .SYNC
+            vga_R                              => vga_R,                              --                              .R
+            vga_G                              => vga_G,                              --                              .G
+            vga_B                              => vga_B,                              --                              .B
+            video_pll_ref_clk_clk              => CLOCK2_50,              --             video_pll_ref_clk.clk
+            video_pll_ref_reset_reset          => '0',          --           video_pll_ref_reset.reset
+            ip_telem_avalon_0_conduit_end_trig => GPIO(1), -- ip_telem_avalon_0_conduit_end.trig
+            ip_telem_avalon_0_conduit_end_dist => LEDR, --                              .dist
+            ip_telem_avalon_0_conduit_end_echo => GPIO(3)  --                              .echo
         );
+
+
 
 end architecture;
 
