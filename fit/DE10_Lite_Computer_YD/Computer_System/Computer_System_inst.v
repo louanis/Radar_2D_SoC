@@ -3,6 +3,9 @@
 		.arduino_reset_n_export             (<connected-to-arduino_reset_n_export>),             //               arduino_reset_n.export
 		.hex3_hex0_export                   (<connected-to-hex3_hex0_export>),                   //                     hex3_hex0.export
 		.hex5_hex4_export                   (<connected-to-hex5_hex4_export>),                   //                     hex5_hex4.export
+		.ip_telem_avalon_0_conduit_end_trig (<connected-to-ip_telem_avalon_0_conduit_end_trig>), // ip_telem_avalon_0_conduit_end.trig
+		.ip_telem_avalon_0_conduit_end_dist (<connected-to-ip_telem_avalon_0_conduit_end_dist>), //                              .dist
+		.ip_telem_avalon_0_conduit_end_echo (<connected-to-ip_telem_avalon_0_conduit_end_echo>), //                              .echo
 		.pushbuttons_export                 (<connected-to-pushbuttons_export>),                 //                   pushbuttons.export
 		.sdram_addr                         (<connected-to-sdram_addr>),                         //                         sdram.addr
 		.sdram_ba                           (<connected-to-sdram_ba>),                           //                              .ba
@@ -26,9 +29,6 @@
 		.vga_G                              (<connected-to-vga_G>),                              //                              .G
 		.vga_B                              (<connected-to-vga_B>),                              //                              .B
 		.video_pll_ref_clk_clk              (<connected-to-video_pll_ref_clk_clk>),              //             video_pll_ref_clk.clk
-		.video_pll_ref_reset_reset          (<connected-to-video_pll_ref_reset_reset>),          //           video_pll_ref_reset.reset
-		.ip_telem_avalon_0_conduit_end_trig (<connected-to-ip_telem_avalon_0_conduit_end_trig>), // ip_telem_avalon_0_conduit_end.trig
-		.ip_telem_avalon_0_conduit_end_dist (<connected-to-ip_telem_avalon_0_conduit_end_dist>), //                              .dist
-		.ip_telem_avalon_0_conduit_end_echo (<connected-to-ip_telem_avalon_0_conduit_end_echo>)  //                              .echo
+		.video_pll_ref_reset_reset          (<connected-to-video_pll_ref_reset_reset>)           //           video_pll_ref_reset.reset
 	);
 

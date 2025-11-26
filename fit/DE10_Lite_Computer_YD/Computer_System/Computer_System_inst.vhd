@@ -4,6 +4,9 @@
 			arduino_reset_n_export             : out   std_logic;                                        -- export
 			hex3_hex0_export                   : out   std_logic_vector(31 downto 0);                    -- export
 			hex5_hex4_export                   : out   std_logic_vector(15 downto 0);                    -- export
+			ip_telem_avalon_0_conduit_end_trig : out   std_logic;                                        -- trig
+			ip_telem_avalon_0_conduit_end_dist : out   std_logic_vector(9 downto 0);                     -- dist
+			ip_telem_avalon_0_conduit_end_echo : in    std_logic                     := 'X';             -- echo
 			pushbuttons_export                 : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- export
 			sdram_addr                         : out   std_logic_vector(12 downto 0);                    -- addr
 			sdram_ba                           : out   std_logic_vector(1 downto 0);                     -- ba
@@ -27,10 +30,7 @@
 			vga_G                              : out   std_logic_vector(3 downto 0);                     -- G
 			vga_B                              : out   std_logic_vector(3 downto 0);                     -- B
 			video_pll_ref_clk_clk              : in    std_logic                     := 'X';             -- clk
-			video_pll_ref_reset_reset          : in    std_logic                     := 'X';             -- reset
-			ip_telem_avalon_0_conduit_end_trig : out   std_logic;                                        -- trig
-			ip_telem_avalon_0_conduit_end_dist : out   std_logic_vector(9 downto 0);                     -- dist
-			ip_telem_avalon_0_conduit_end_echo : in    std_logic                     := 'X'              -- echo
+			video_pll_ref_reset_reset          : in    std_logic                     := 'X'              -- reset
 		);
 	end component Computer_System;
 
@@ -40,6 +40,9 @@
 			arduino_reset_n_export             => CONNECTED_TO_arduino_reset_n_export,             --               arduino_reset_n.export
 			hex3_hex0_export                   => CONNECTED_TO_hex3_hex0_export,                   --                     hex3_hex0.export
 			hex5_hex4_export                   => CONNECTED_TO_hex5_hex4_export,                   --                     hex5_hex4.export
+			ip_telem_avalon_0_conduit_end_trig => CONNECTED_TO_ip_telem_avalon_0_conduit_end_trig, -- ip_telem_avalon_0_conduit_end.trig
+			ip_telem_avalon_0_conduit_end_dist => CONNECTED_TO_ip_telem_avalon_0_conduit_end_dist, --                              .dist
+			ip_telem_avalon_0_conduit_end_echo => CONNECTED_TO_ip_telem_avalon_0_conduit_end_echo, --                              .echo
 			pushbuttons_export                 => CONNECTED_TO_pushbuttons_export,                 --                   pushbuttons.export
 			sdram_addr                         => CONNECTED_TO_sdram_addr,                         --                         sdram.addr
 			sdram_ba                           => CONNECTED_TO_sdram_ba,                           --                              .ba
@@ -63,9 +66,6 @@
 			vga_G                              => CONNECTED_TO_vga_G,                              --                              .G
 			vga_B                              => CONNECTED_TO_vga_B,                              --                              .B
 			video_pll_ref_clk_clk              => CONNECTED_TO_video_pll_ref_clk_clk,              --             video_pll_ref_clk.clk
-			video_pll_ref_reset_reset          => CONNECTED_TO_video_pll_ref_reset_reset,          --           video_pll_ref_reset.reset
-			ip_telem_avalon_0_conduit_end_trig => CONNECTED_TO_ip_telem_avalon_0_conduit_end_trig, -- ip_telem_avalon_0_conduit_end.trig
-			ip_telem_avalon_0_conduit_end_dist => CONNECTED_TO_ip_telem_avalon_0_conduit_end_dist, --                              .dist
-			ip_telem_avalon_0_conduit_end_echo => CONNECTED_TO_ip_telem_avalon_0_conduit_end_echo  --                              .echo
+			video_pll_ref_reset_reset          => CONNECTED_TO_video_pll_ref_reset_reset           --           video_pll_ref_reset.reset
 		);
 

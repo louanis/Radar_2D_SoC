@@ -14,7 +14,8 @@ architecture tb of tb_telemetre_us is
     signal echo     : std_logic := '0';
     signal trig     : std_logic;
     signal dist_cm  : std_logic_vector(9 downto 0);
-
+    signal readdata : std_logic_vector(31 downto 0);
+    signal chipselect : std_logic := '1'; 
     -- Clock period for 50 MHz = 20 ns
     constant T_CLK : time := 20 ns;
 
@@ -37,11 +38,14 @@ begin
     ------------------------------------------------------------
     uut: entity work.TELEMETRE_US
         port map(
-            clk     => clk,
-            rst_n   => rst_n,
-            echo    => echo,
-            trig    => trig,
-            dist_cm => dist_cm
+            clk        => clk,
+            rst_n      => rst_n,
+            echo       => echo,
+            trig       => trig,
+            dist_cm    => dist_cm,
+            chipselect => chipselect,
+            readdata   => readdata,
+            read_n     => '0'
         );
 
     ------------------------------------------------------------

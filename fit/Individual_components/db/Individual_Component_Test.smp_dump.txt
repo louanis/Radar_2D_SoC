@@ -1,4 +1,10 @@
 
+State Machine - |individual_component_test|servomoteur:SERVO_inst|curr_state
+Name curr_state.DOWN curr_state.PULSE curr_state.START_PULSE 
+curr_state.START_PULSE 0 0 0 
+curr_state.PULSE 0 1 1 
+curr_state.DOWN 1 0 1 
+
 State Machine - |individual_component_test|telemetre_us:TELEMETRE_US_inst|curr_state
 Name curr_state.WAIT_TRIGGER curr_state.CALC_DIST curr_state.WAIT_END_ECHO curr_state.WAIT_ECHO curr_state.TRIGGER 
 curr_state.TRIGGER 0 0 0 0 0 

@@ -1,5 +1,5 @@
 Flow report for DE10_Lite_Computer
-Wed Nov 26 15:20:45 2025
+Thu Nov 27 00:06:51 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Nov 26 15:20:29 2025       ;
+; Flow Status                        ; Successful - Thu Nov 27 00:06:44 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; DE10_Lite_Computer                          ;
 ; Top-level Entity Name              ; DE10_Lite_Computer                          ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C6GES                            ;
 ; Timing Models                      ; Preliminary                                 ;
-; Total logic elements               ; 14,021 / 49,760 ( 28 % )                    ;
-;     Total combinational functions  ; 12,624 / 49,760 ( 25 % )                    ;
+; Total logic elements               ; 14,060 / 49,760 ( 28 % )                    ;
+;     Total combinational functions  ; 12,649 / 49,760 ( 25 % )                    ;
 ;     Dedicated logic registers      ; 7,598 / 49,760 ( 15 % )                     ;
 ; Total registers                    ; 7667                                        ;
 ; Total pins                         ; 185 / 360 ( 51 % )                          ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/26/2025 15:16:46 ;
+; Start date & time ; 11/27/2025 00:04:43 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE10_Lite_Computer  ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-------------------------------------------------------------------+---------------+-----------------+------------+
 ; Assignment Name                     ; Value                                                             ; Default Value ; Entity Name     ; Section Id ;
 +-------------------------------------+-------------------------------------------------------------------+---------------+-----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589203.176416660624040                                    ; --            ; --              ; --         ;
+; COMPILER_SIGNATURE_ID               ; 209763097149745.176419828238736                                   ; --            ; --              ; --         ;
 ; ENABLE_SIGNALTAP                    ; On                                                                ; --            ; --              ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                ; --            ; --              ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                 ; --            ; --              ; --         ;
@@ -90,7 +90,7 @@ refer to the applicable agreement for further details.
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                             ; --            ; --              ; --         ;
 ; SLD_FILE                            ; Computer_System/synthesis/Computer_System.regmap                  ; --            ; --              ; --         ;
 ; SLD_FILE                            ; Computer_System/synthesis/Computer_System.debuginfo               ; --            ; --              ; --         ;
-; SLD_INFO                            ; QSYS_NAME Computer_System HAS_SOPCINFO 1 GENERATION_ID 1764166537 ; --            ; Computer_System ; --         ;
+; SLD_INFO                            ; QSYS_NAME Computer_System HAS_SOPCINFO 1 GENERATION_ID 1764193592 ; --            ; Computer_System ; --         ;
 ; SOPCINFO_FILE                       ; Computer_System/synthesis/../../Computer_System.sopcinfo          ; --            ; --              ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                                ; --            ; --              ; --         ;
 ; USE_SIGNALTAP_FILE                  ; stp1.stp                                                          ; --            ; --              ; --         ;
@@ -102,11 +102,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:49     ; 1.0                     ; 5233 MB             ; 00:01:59                           ;
-; Fitter               ; 00:01:35     ; 1.5                     ; 5952 MB             ; 00:03:16                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4757 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:15     ; 2.6                     ; 4993 MB             ; 00:00:34                           ;
-; Total                ; 00:03:43     ; --                      ; --                  ; 00:05:53                           ;
+; Analysis & Synthesis ; 00:01:08     ; 1.0                     ; 5294 MB             ; 00:01:15                           ;
+; Fitter               ; 00:00:40     ; 2.0                     ; 6847 MB             ; 00:01:54                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4757 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:06     ; 4.4                     ; 5136 MB             ; 00:00:18                           ;
+; Total                ; 00:01:57     ; --                      ; --                  ; 00:03:30                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -115,10 +115,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-KGBA9LL  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-KGBA9LL  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-KGBA9LL  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-KGBA9LL  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-PTLM717  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-PTLM717  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-PTLM717  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-PTLM717  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

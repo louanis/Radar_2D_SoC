@@ -33,7 +33,8 @@ entity individual_component_test is
 end entity;
 
 architecture Behavioral of individual_component_test is
-    signal dist : std_logic_vector(9 downto 0);
+    signal dist     : std_logic_vector(9 downto 0);
+    signal position : integer;
  
 begin
 
@@ -52,7 +53,7 @@ TELEMETRE_US_inst : entity work.TELEMETRE_US
 
 -- Display distance on HEX displays
 
-SEVSEG_inst : entity work.binary_to_sevseg_3dig
+SEVSEG_TELE_inst : entity work.binary_to_sevseg_3dig
     port map (
         clk => CLOCK_50,
         rst_n    => KEY(0),  -- active low asynchronous reset
@@ -64,5 +65,27 @@ SEVSEG_inst : entity work.binary_to_sevseg_3dig
 
     LEDR(9 downto 0) <= dist;
 
+
+SERVO_inst : entity work.servomoteur
+    port map(
+        clk      => CLOCK_50,
+        rst_n    => KEY(0),
+        position => position,
+        commande => GPIO(0)
+    );
+
+    position <= to_integer(unsigned(SW));
+
+SEVSEG_SERVO_inst : entity work.binary_to_sevseg_3dig
+    port map (
+        clk => CLOCK_50,
+        rst_n    => KEY(0),  -- active low asynchronous reset
+        bin_in  => SW,
+        seg_units  =>  HEX3(6 downto 0), -- a..g active LOW
+        seg_tens    =>  HEX4(6 downto 0),
+        seg_hundreds =>  HEX5(6 downto 0)
+    );
+
+    LEDR(9 downto 0) <= dist;
  
 end architecture;

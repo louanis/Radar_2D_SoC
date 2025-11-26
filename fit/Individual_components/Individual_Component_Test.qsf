@@ -455,6 +455,7 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[3]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS
+set_global_assignment -name VHDL_FILE ../../src/servomoteur.vhd
 set_global_assignment -name VHDL_FILE ../../src/Decimal_Digits.vhd
 set_global_assignment -name VHDL_FILE ../../src/SEVEN_SEG.vhd
 set_global_assignment -name VHDL_FILE ../../src/binary_to_sevseg_3dig.vhd

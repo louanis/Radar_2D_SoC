@@ -781,7 +781,7 @@
 								<delegate id="delegate_CommonDockStationFactory">
 									<root>true</root>
 									<content delegate="flap dock">
-										<window auto="true" direction="SOUTH"/>
+										<window auto="true" direction="NORTH"/>
 										<placeholders>
 											<version>0</version>
 											<format>dock.PlaceholderList</format>
