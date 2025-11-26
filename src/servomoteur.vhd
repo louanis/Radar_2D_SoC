@@ -37,7 +37,7 @@ begin
             glob_cmp <= glob_cmp + 1;
             case curr_state is
                 when START_PULSE =>
-                    up_dur <= 500 + position*556;
+                    up_dur <= 25000 + position*556;
                     glob_cmp <= 0;
                     cmp <= 0;
                     commande <= '1';

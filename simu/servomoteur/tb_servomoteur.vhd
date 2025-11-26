@@ -1,105 +1,79 @@
--- Testbench for servomoteur.vhd
--- File: tb_servomoteur.vhd
--- Location: simu/servomoteur/
--- This testbench instantiates the servomoteur DUT and applies basic stimulus.
-
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity tb_servomoteur is
-end entity tb_servomoteur;
+end tb_servomoteur;
 
 architecture sim of tb_servomoteur is
 
-    -- DUT generics (adjust as needed)
-    constant CLK_PERIOD : time := 20 ns; -- 50 MHz
+    -- DUT signals
+    signal clk_tb      : std_logic := '0';
+    signal rst_n_tb    : std_logic := '0';
+    signal position_tb : integer   := 0;
+    signal commande_tb : std_logic;
 
-    -- DUT ports
-    signal clk      : std_logic := '0';
-    signal rst_n    : std_logic := '0';
-    signal angle    : integer;
-    signal pwm_out  : std_logic;
+    -- Clock period 20 ns (50 MHz)
+    constant CLK_PERIOD : time := 20 ns;
 
 begin
 
-    -- Clock generation
-    clk_process : process
+    --------------------------------------------------------------------
+    -- Clock generator
+    --------------------------------------------------------------------
+    clk_gen : process
     begin
-        while true loop
-            clk <= '0';
-            wait for CLK_PERIOD/2;
-            clk <= '1';
-            wait for CLK_PERIOD/2;
-        end loop;
+        clk_tb <= '0';
+        wait for CLK_PERIOD/2;
+        clk_tb <= '1';
+        wait for CLK_PERIOD/2;
     end process;
 
-    -- Reset process
-    rst_process : process
-    begin
-        rst_n <= '0';
-        wait for 100 ns;
-        rst_n <= '1';
-        wait;
-    end process;
-
-    -- Stimulus process
-    stim_proc : process
-    begin
-        -- Wait for reset deassertion
-        wait until rst_n = '1';
-        wait for 50 ns;
-
-        -- Sweep angle from 0 to 180 (assuming 8-bit input, 0-180 valid)
-        for i in 0 to 180 loop
-            angle <= i;
-            wait for 1 ms;
-        end loop;
-
-        -- Hold at max angle
-        wait for 5 ms;
-
-        -- Sweep back to 0
-        for i in 180 downto 0 loop
-            angle <= i;
-            wait for 1 ms;
-        end loop;
-
-        wait for 5 ms;
-        -- End simulation
-        wait;
-    end process;
-
-    -- DUT instantiation
-    uut: entity work.servomoteur
-        port map (
-            clk     => clk,
-            rst_n   => rst_n,
-            position => angle,
-            commande => pwm_out
+    --------------------------------------------------------------------
+    -- Instantiate DUT
+    --------------------------------------------------------------------
+    DUT : entity work.servomoteur
+        port map(
+            clk      => clk_tb,
+            rst_n    => rst_n_tb,
+            position => position_tb,
+            commande => commande_tb
         );
 
-        waveform_proc : process
-begin
-    -- Wait for simulation to start
-    wait for 0 ns;
-    -- Add all signals in this testbench to the waveform window (ModelSim/Questa)
-    -- This is a ModelSim/Questa-specific command; ignored by synthesis
-    -- Uncomment the next line if you want to see all signals in the GUI
-    -- report "Add signals to waveform window" severity note;
-    wait;
-end process;
-end architecture sim;
--- Optionally, waveform dump for ModelSim/Questa (uncomment if needed)
--- This block helps with viewing signals in simulation tools.
--- Uncomment if you want automatic VCD/GUI waveform dump.
+    --------------------------------------------------------------------
+    -- Stimulus
+    --------------------------------------------------------------------
+    stim_proc : process
+    begin
+        
+        -- Hold reset low
+        rst_n_tb <= '0';
+        wait for 200 ns;
+        rst_n_tb <= '1';
+        wait for 200 ns;
 
--- process
--- begin
---     -- Wait for simulation to start
---     wait for 0 ns;
---     -- For ModelSim: save all signals
---     assert false report "Add signals to waveform window" severity note;
---     wait;
--- end process;
--- Optional: Add signals to the waveform window automatically in ModelSim/Questa
+        ------------------------------------------------------------
+        -- Test 0°  => expected pulse ≈ 0.5 ms
+        ------------------------------------------------------------
+        position_tb <= 0;
+        wait for 40 ms;   -- observe two PWM periods
+
+        ------------------------------------------------------------
+        -- Test 90° => expected pulse ≈ 1.5 ms
+        ------------------------------------------------------------
+        position_tb <= 90;
+        wait for 40 ms;
+
+        ------------------------------------------------------------
+        -- Test 180° => expected pulse ≈ 2.5 ms
+        ------------------------------------------------------------
+        position_tb <= 180;
+        wait for 40 ms;
+
+        ------------------------------------------------------------
+        -- End simulation
+        ------------------------------------------------------------
+        wait;
+    end process;
+
+end architecture;
