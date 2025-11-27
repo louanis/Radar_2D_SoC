@@ -102,9 +102,9 @@ write_state.ST_HEADER_2 0 1 0 1
 write_state.ST_WRITE_DATA 1 0 0 1 
 
 State Machine - |DE10_Lite_Computer|Computer_System:u0|telemetre_us:ip_telem_avalon_0|curr_state
-Name curr_state.WAIT_TRIGGER curr_state.CALC_DIST curr_state.WAIT_END_ECHO curr_state.WAIT_ECHO curr_state.TRIGGER 
-curr_state.TRIGGER 0 0 0 0 0 
+Name curr_state.TRIGGER curr_state.CALC_DIST curr_state.WAIT_END_ECHO curr_state.WAIT_ECHO curr_state.WAIT_TRIGGER 
+curr_state.WAIT_TRIGGER 0 0 0 0 0 
 curr_state.WAIT_ECHO 0 0 0 1 1 
 curr_state.WAIT_END_ECHO 0 0 1 0 1 
 curr_state.CALC_DIST 0 1 0 0 1 
-curr_state.WAIT_TRIGGER 1 0 0 0 1 
+curr_state.TRIGGER 1 0 0 0 1 

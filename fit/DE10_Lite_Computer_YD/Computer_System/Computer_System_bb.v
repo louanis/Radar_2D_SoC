@@ -17,7 +17,6 @@ module Computer_System (
 	sdram_dqm,
 	sdram_ras_n,
 	sdram_we_n,
-	sdram_clk_clk,
 	slider_switches_export,
 	system_pll_ref_clk_clk,
 	system_pll_ref_reset_reset,
@@ -30,7 +29,8 @@ module Computer_System (
 	vga_G,
 	vga_B,
 	video_pll_ref_clk_clk,
-	video_pll_ref_reset_reset);	
+	video_pll_ref_reset_reset,
+	ip_servo_avalon_0_conduit_end_command);	
 
 	inout	[15:0]	arduino_gpio_export;
 	output		arduino_reset_n_export;
@@ -49,7 +49,6 @@ module Computer_System (
 	output	[1:0]	sdram_dqm;
 	output		sdram_ras_n;
 	output		sdram_we_n;
-	output		sdram_clk_clk;
 	input	[9:0]	slider_switches_export;
 	input		system_pll_ref_clk_clk;
 	input		system_pll_ref_reset_reset;
@@ -63,4 +62,5 @@ module Computer_System (
 	output	[3:0]	vga_B;
 	input		video_pll_ref_clk_clk;
 	input		video_pll_ref_reset_reset;
+	output		ip_servo_avalon_0_conduit_end_command;
 endmodule

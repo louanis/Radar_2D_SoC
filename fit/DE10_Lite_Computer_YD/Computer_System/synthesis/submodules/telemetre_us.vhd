@@ -49,6 +49,7 @@ begin
 
         if rst_n = '0' then
             result <= (others => '0');
+            curr_state <= WAIT_TRIGGER;
         elsif rising_edge(clk) then
             case curr_state is
                 when TRIGGER =>

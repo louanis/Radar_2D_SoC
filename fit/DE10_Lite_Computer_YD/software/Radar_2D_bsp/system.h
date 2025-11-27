@@ -4,7 +4,7 @@
  * Machine generated for CPU 'Nios2' in SOPC Builder design 'Computer_System'
  * SOPC Builder design path: ../../Computer_System.sopcinfo
  *
- * Generated: Wed Nov 26 23:10:10 CET 2025
+ * Generated: Thu Nov 27 02:56:59 CET 2025
  */
 
 /*
@@ -207,6 +207,7 @@
 #define __ALTERA_NIOS_CUSTOM_INSTR_FLOATING_POINT
 #define __ALTERA_UP_AVALON_VIDEO_DMA_CONTROLLER
 #define __ALTERA_UP_AVALON_VIDEO_RGB_RESAMPLER
+#define __IP_SERVO_AVALON
 #define __IP_TELEM_AVALON
 
 
@@ -262,6 +263,20 @@
 #define HEX5_HEX4_RESET_VALUE 0
 #define HEX5_HEX4_SPAN 16
 #define HEX5_HEX4_TYPE "altera_avalon_pio"
+
+
+/*
+ * IP_servo_avalon_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_IP_servo_avalon_0 IP_servo_avalon
+#define IP_SERVO_AVALON_0_BASE 0x4000008
+#define IP_SERVO_AVALON_0_IRQ -1
+#define IP_SERVO_AVALON_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define IP_SERVO_AVALON_0_NAME "/dev/IP_servo_avalon_0"
+#define IP_SERVO_AVALON_0_SPAN 1
+#define IP_SERVO_AVALON_0_TYPE "IP_servo_avalon"
 
 
 /*
@@ -482,7 +497,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/SysID"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1764193592
+#define SYSID_TIMESTAMP 1764208568
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 

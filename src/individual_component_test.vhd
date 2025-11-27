@@ -34,7 +34,6 @@ end entity;
 
 architecture Behavioral of individual_component_test is
     signal dist     : std_logic_vector(9 downto 0);
-    signal position : integer;
  
 begin
 
@@ -70,11 +69,10 @@ SERVO_inst : entity work.servomoteur
     port map(
         clk      => CLOCK_50,
         rst_n    => KEY(0),
-        position => position,
+        position => SW(7 downto 0),
         commande => GPIO(0)
     );
 
-    position <= to_integer(unsigned(SW));
 
 SEVSEG_SERVO_inst : entity work.binary_to_sevseg_3dig
     port map (

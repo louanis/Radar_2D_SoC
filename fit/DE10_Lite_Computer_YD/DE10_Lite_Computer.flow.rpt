@@ -1,5 +1,5 @@
 Flow report for DE10_Lite_Computer
-Thu Nov 27 00:06:51 2025
+Thu Nov 27 02:58:09 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,24 +40,24 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Nov 27 00:06:44 2025       ;
+; Flow Status                        ; Flow Failed - Thu Nov 27 02:58:09 2025      ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; DE10_Lite_Computer                          ;
 ; Top-level Entity Name              ; DE10_Lite_Computer                          ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C6GES                            ;
 ; Timing Models                      ; Preliminary                                 ;
-; Total logic elements               ; 14,060 / 49,760 ( 28 % )                    ;
-;     Total combinational functions  ; 12,649 / 49,760 ( 25 % )                    ;
-;     Dedicated logic registers      ; 7,598 / 49,760 ( 15 % )                     ;
-; Total registers                    ; 7667                                        ;
-; Total pins                         ; 185 / 360 ( 51 % )                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 621,241 / 1,677,312 ( 37 % )                ;
-; Embedded Multiplier 9-bit elements ; 7 / 288 ( 2 % )                             ;
-; Total PLLs                         ; 2 / 4 ( 50 % )                              ;
-; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
-; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/27/2025 00:04:43 ;
+; Start date & time ; 11/27/2025 02:57:36 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE10_Lite_Computer  ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-------------------------------------------------------------------+---------------+-----------------+------------+
 ; Assignment Name                     ; Value                                                             ; Default Value ; Entity Name     ; Section Id ;
 +-------------------------------------+-------------------------------------------------------------------+---------------+-----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 209763097149745.176419828238736                                   ; --            ; --              ; --         ;
+; COMPILER_SIGNATURE_ID               ; 209763097149745.176420865633896                                   ; --            ; --              ; --         ;
 ; ENABLE_SIGNALTAP                    ; On                                                                ; --            ; --              ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                ; --            ; --              ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                 ; --            ; --              ; --         ;
@@ -90,7 +90,8 @@ refer to the applicable agreement for further details.
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                             ; --            ; --              ; --         ;
 ; SLD_FILE                            ; Computer_System/synthesis/Computer_System.regmap                  ; --            ; --              ; --         ;
 ; SLD_FILE                            ; Computer_System/synthesis/Computer_System.debuginfo               ; --            ; --              ; --         ;
-; SLD_INFO                            ; QSYS_NAME Computer_System HAS_SOPCINFO 1 GENERATION_ID 1764193592 ; --            ; Computer_System ; --         ;
+; SLD_FILE                            ; db/stp1_auto_stripped.stp                                         ; --            ; --              ; --         ;
+; SLD_INFO                            ; QSYS_NAME Computer_System HAS_SOPCINFO 1 GENERATION_ID 1764208568 ; --            ; Computer_System ; --         ;
 ; SOPCINFO_FILE                       ; Computer_System/synthesis/../../Computer_System.sopcinfo          ; --            ; --              ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                                ; --            ; --              ; --         ;
 ; USE_SIGNALTAP_FILE                  ; stp1.stp                                                          ; --            ; --              ; --         ;
@@ -102,11 +103,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:08     ; 1.0                     ; 5294 MB             ; 00:01:15                           ;
-; Fitter               ; 00:00:40     ; 2.0                     ; 6847 MB             ; 00:01:54                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4757 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:06     ; 4.4                     ; 5136 MB             ; 00:00:18                           ;
-; Total                ; 00:01:57     ; --                      ; --                  ; 00:03:30                           ;
+; Analysis & Synthesis ; 00:00:33     ; 1.0                     ; 5208 MB             ; 00:00:37                           ;
+; Total                ; 00:00:33     ; --                      ; --                  ; 00:00:37                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -116,9 +114,6 @@ refer to the applicable agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; DESKTOP-PTLM717  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-PTLM717  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-PTLM717  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-PTLM717  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -126,9 +121,6 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off DE10_Lite_Computer -c DE10_Lite_Computer
-quartus_fit --read_settings_files=off --write_settings_files=off DE10_Lite_Computer -c DE10_Lite_Computer
-quartus_asm --read_settings_files=off --write_settings_files=off DE10_Lite_Computer -c DE10_Lite_Computer
-quartus_sta DE10_Lite_Computer -c DE10_Lite_Computer
 
 
 

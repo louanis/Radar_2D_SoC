@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Nov 26, 2025 11:34:45 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1764196485317</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>27 nov. 2025 02:56:59</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1764208619140</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\Yanis\Documents\Cours\Projet_SoC\Radar_2D_SoC\fit\DE10_Lite_Computer_YD\software\Radar_2D_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\Computer_System.sopcinfo</SopcDesignFile>
@@ -914,6 +914,12 @@
                 <slaveDescriptor>IP_telem_avalon_0</slaveDescriptor>
                 <addressRange>0x04000004 - 0x04000007</addressRange>
                 <addressSpan>4</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>IP_servo_avalon_0</slaveDescriptor>
+                <addressRange>0x04000008 - 0x04000008</addressRange>
+                <addressSpan>1</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
