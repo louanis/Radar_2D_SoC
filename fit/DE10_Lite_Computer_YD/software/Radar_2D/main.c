@@ -18,7 +18,8 @@ int main(){
 	while(1){
 		angle += 20;
 		alt_u32 register_value = IORD(IP_TELEM_AVALON_0_BASE, 0);
-		IOWR(0x4000008, 0, angle%180);
+		IOWR(IP_SERVO_AVALON_0_BASE, 0, angle%180);
+		printf("%x\n",IP_SERVO_AVALON_0_BASE);
 
 
 		// Perform calculations on the register value
