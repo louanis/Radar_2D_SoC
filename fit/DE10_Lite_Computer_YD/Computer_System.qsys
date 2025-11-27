@@ -41,6 +41,22 @@
          type = "boolean";
       }
    }
+   element Computer_System
+   {
+      datum _originalDeviceFamily
+      {
+         value = "MAX 10";
+         type = "String";
+      }
+   }
+   element Computer_System
+   {
+      datum _originalDeviceFamily
+      {
+         value = "MAX 10";
+         type = "String";
+      }
+   }
    element HEX3_HEX0
    {
       datum _sortIndex
@@ -1512,6 +1528,16 @@
    version="18.1"
    start="System_PLL.reset_source"
    end="SysID.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="System_PLL.reset_source"
+   end="IP_telem_avalon_0.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="System_PLL.reset_source"
+   end="IP_servo_avalon_0.reset" />
  <connection
    kind="reset"
    version="18.1"
