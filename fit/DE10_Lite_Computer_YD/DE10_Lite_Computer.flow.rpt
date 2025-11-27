@@ -1,5 +1,5 @@
 Flow report for DE10_Lite_Computer
-Thu Nov 27 03:16:09 2025
+Thu Nov 27 14:34:12 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,20 +40,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Nov 27 03:16:03 2025       ;
+; Flow Status                        ; Successful - Thu Nov 27 14:34:05 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; DE10_Lite_Computer                          ;
 ; Top-level Entity Name              ; DE10_Lite_Computer                          ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C6GES                            ;
 ; Timing Models                      ; Preliminary                                 ;
-; Total logic elements               ; 14,390 / 49,760 ( 29 % )                    ;
-;     Total combinational functions  ; 12,985 / 49,760 ( 26 % )                    ;
-;     Dedicated logic registers      ; 7,739 / 49,760 ( 16 % )                     ;
-; Total registers                    ; 7808                                        ;
+; Total logic elements               ; 15,079 / 49,760 ( 30 % )                    ;
+;     Total combinational functions  ; 13,398 / 49,760 ( 27 % )                    ;
+;     Dedicated logic registers      ; 8,306 / 49,760 ( 17 % )                     ;
+; Total registers                    ; 8375                                        ;
 ; Total pins                         ; 185 / 360 ( 51 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 621,241 / 1,677,312 ( 37 % )                ;
+; Total memory bits                  ; 624,057 / 1,677,312 ( 37 % )                ;
 ; Embedded Multiplier 9-bit elements ; 7 / 288 ( 2 % )                             ;
 ; Total PLLs                         ; 2 / 4 ( 50 % )                              ;
 ; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
@@ -66,35 +66,63 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/27/2025 03:14:00 ;
+; Start date & time ; 11/27/2025 14:31:58 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE10_Lite_Computer  ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                       ;
-+-------------------------------------+-------------------------------------------------------------------+---------------+-----------------+------------+
-; Assignment Name                     ; Value                                                             ; Default Value ; Entity Name     ; Section Id ;
-+-------------------------------------+-------------------------------------------------------------------+---------------+-----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 209763097149745.176420964018956                                   ; --            ; --              ; --         ;
-; ENABLE_SIGNALTAP                    ; On                                                                ; --            ; --              ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                                                ; --            ; --              ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                                                 ; --            ; --              ; --         ;
-; MISC_FILE                           ; Computer_System/synthesis/../Computer_System.cmp                  ; --            ; --              ; --         ;
-; MISC_FILE                           ; Computer_System/synthesis/../../Computer_System.qsys              ; --            ; --              ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family)                            ; --            ; --              ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                            ; --            ; --              ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                            ; --            ; --              ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                               ; --            ; --              ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                             ; --            ; --              ; --         ;
-; SLD_FILE                            ; Computer_System/synthesis/Computer_System.regmap                  ; --            ; --              ; --         ;
-; SLD_FILE                            ; Computer_System/synthesis/Computer_System.debuginfo               ; --            ; --              ; --         ;
-; SLD_INFO                            ; QSYS_NAME Computer_System HAS_SOPCINFO 1 GENERATION_ID 1764209359 ; --            ; Computer_System ; --         ;
-; SOPCINFO_FILE                       ; Computer_System/synthesis/../../Computer_System.sopcinfo          ; --            ; --              ; --         ;
-; SYNTHESIS_ONLY_QIP                  ; On                                                                ; --            ; --              ; --         ;
-; USE_SIGNALTAP_FILE                  ; stp1.stp                                                          ; --            ; --              ; --         ;
-+-------------------------------------+-------------------------------------------------------------------+---------------+-----------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                      ;
++-------------------------------------+------------------------------------------------------------------------------------------------------------+---------------+-----------------+------------------+
+; Assignment Name                     ; Value                                                                                                      ; Default Value ; Entity Name     ; Section Id       ;
++-------------------------------------+------------------------------------------------------------------------------------------------------------+---------------+-----------------+------------------+
+; COMPILER_SIGNATURE_ID               ; 209763097149745.176425031744600                                                                            ; --            ; --              ; --               ;
+; ENABLE_SIGNALTAP                    ; On                                                                                                         ; --            ; --              ; --               ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                                         ; --            ; --              ; --               ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                                          ; --            ; --              ; --               ;
+; MISC_FILE                           ; Computer_System/synthesis/../Computer_System.cmp                                                           ; --            ; --              ; --               ;
+; MISC_FILE                           ; Computer_System/synthesis/../../Computer_System.qsys                                                       ; --            ; --              ; --               ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                                                     ; --            ; --              ; Top              ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                                                     ; --            ; --              ; Top              ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                                                     ; --            ; --              ; Top              ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                                                        ; --            ; --              ; --               ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                                      ; --            ; --              ; --               ;
+; SLD_FILE                            ; Computer_System/synthesis/Computer_System.regmap                                                           ; --            ; --              ; --               ;
+; SLD_FILE                            ; Computer_System/synthesis/Computer_System.debuginfo                                                        ; --            ; --              ; --               ;
+; SLD_FILE                            ; db/signal_tap_auto_stripped.stp                                                                            ; --            ; --              ; --               ;
+; SLD_INFO                            ; QSYS_NAME Computer_System HAS_SOPCINFO 1 GENERATION_ID 1764209359                                          ; --            ; Computer_System ; --               ;
+; SLD_NODE_CREATOR_ID                 ; 110                                                                                                        ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_ENTITY_NAME                ; sld_signaltap                                                                                              ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_RAM_BLOCK_TYPE=AUTO                                                                                    ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_INFO=805334528                                                                                    ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_POWER_UP_TRIGGER=0                                                                                     ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SEGMENT_SIZE=128                                                                                       ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ATTRIBUTE_MEM_MODE=OFF                                                                                 ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INCREMENTAL_ROUTING=1                                                                                  ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL=1                                                                                        ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SAMPLE_DEPTH=128                                                                                       ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_IN_ENABLED=0                                                                                   ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_PIPELINE=0                                                                                     ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_RAM_PIPELINE=0                                                                                         ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_COUNTER_PIPELINE=0                                                                                     ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ADVANCED_TRIGGER_ENTITY=basic,1,                                                                       ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL_PIPELINE=1                                                                               ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ENABLE_ADVANCED_TRIGGER=0                                                                              ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_DATA_BITS=22                                                                                           ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_BITS=22                                                                                        ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STORAGE_QUALIFIER_BITS=22                                                                              ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK_LENGTH=87                                                                               ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0                                                              ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_FLOW_USE_GENERATED=0                                                                             ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_BITS=11                                                                                          ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_BUFFER_FULL_STOP=1                                                                                     ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_CURRENT_RESOURCE_WIDTH=1                                                                               ; --            ; --              ; auto_signaltap_0 ;
+; SOPCINFO_FILE                       ; Computer_System/synthesis/../../Computer_System.sopcinfo                                                   ; --            ; --              ; --               ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                                                         ; --            ; --              ; --               ;
+; USE_SIGNALTAP_FILE                  ; ../signal_tap.stp                                                                                          ; --            ; --              ; --               ;
++-------------------------------------+------------------------------------------------------------------------------------------------------------+---------------+-----------------+------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -102,11 +130,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:06     ; 1.0                     ; 5309 MB             ; 00:01:19                           ;
-; Fitter               ; 00:00:43     ; 2.0                     ; 6868 MB             ; 00:01:53                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4757 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:05     ; 4.5                     ; 5138 MB             ; 00:00:18                           ;
-; Total                ; 00:01:57     ; --                      ; --                  ; 00:03:32                           ;
+; Analysis & Synthesis ; 00:01:11     ; 1.0                     ; 5329 MB             ; 00:01:20                           ;
+; Fitter               ; 00:00:41     ; 2.0                     ; 6870 MB             ; 00:01:56                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4759 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:06     ; 4.3                     ; 5144 MB             ; 00:00:18                           ;
+; Total                ; 00:02:01     ; --                      ; --                  ; 00:03:37                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

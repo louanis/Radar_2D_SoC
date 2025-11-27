@@ -1,5 +1,5 @@
 Timing Analyzer report for DE10_Lite_Computer
-Thu Nov 27 03:16:09 2025
+Thu Nov 27 14:34:12 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -94,15 +94,15 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 4.56        ;
+; Average used               ; 4.27        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  31.4%      ;
-;     Processor 3            ;  26.3%      ;
-;     Processor 4            ;  23.3%      ;
-;     Processors 5-16        ;  22.9%      ;
+;     Processor 2            ;  30.4%      ;
+;     Processor 3            ;  24.1%      ;
+;     Processor 4            ;  21.4%      ;
+;     Processors 5-16        ;  20.9%      ;
 +----------------------------+-------------+
 
 
@@ -111,10 +111,10 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------+--------+--------------------------+
 ; SDC File Path                                                            ; Status ; Read at                  ;
 +--------------------------------------------------------------------------+--------+--------------------------+
-; Computer_System/synthesis/submodules/altera_reset_controller.sdc         ; OK     ; Thu Nov 27 03:16:06 2025 ;
-; Computer_System/synthesis/submodules/Computer_System_Nios2_cpu.sdc       ; OK     ; Thu Nov 27 03:16:06 2025 ;
-; Computer_System/synthesis/submodules/altera_avalon_st_jtag_interface.sdc ; OK     ; Thu Nov 27 03:16:06 2025 ;
-; DE10_Lite_Computer.sdc                                                   ; OK     ; Thu Nov 27 03:16:06 2025 ;
+; Computer_System/synthesis/submodules/altera_reset_controller.sdc         ; OK     ; Thu Nov 27 14:34:08 2025 ;
+; Computer_System/synthesis/submodules/Computer_System_Nios2_cpu.sdc       ; OK     ; Thu Nov 27 14:34:08 2025 ;
+; Computer_System/synthesis/submodules/altera_avalon_st_jtag_interface.sdc ; OK     ; Thu Nov 27 14:34:08 2025 ;
+; DE10_Lite_Computer.sdc                                                   ; OK     ; Thu Nov 27 14:34:08 2025 ;
 +--------------------------------------------------------------------------+--------+--------------------------+
 
 
@@ -139,9 +139,10 @@ refer to the applicable agreement for further details.
 +------------+-----------------+----------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                 ; Note ;
 +------------+-----------------+----------------------------------------------------------------------------+------+
-; 15.13 MHz  ; 15.13 MHz       ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ;      ;
-; 88.83 MHz  ; 88.83 MHz       ; altera_reserved_tck                                                        ;      ;
-; 180.57 MHz ; 180.57 MHz      ; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ;      ;
+; 14.75 MHz  ; 14.75 MHz       ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ;      ;
+; 62.99 MHz  ; 62.99 MHz       ; altera_reserved_tck                                                        ;      ;
+; 192.2 MHz  ; 192.2 MHz       ; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ;      ;
+; 220.22 MHz ; 220.22 MHz      ; CLOCK_50                                                                   ;      ;
 +------------+-----------------+----------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -151,21 +152,23 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                      ; Slack   ; End Point TNS ;
 +----------------------------------------------------------------------------+---------+---------------+
-; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; -56.114 ; -2919.630     ;
-; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 34.462  ; 0.000         ;
-; altera_reserved_tck                                                        ; 44.371  ; 0.000         ;
+; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; -57.811 ; -2776.275     ;
+; CLOCK_50                                                                   ; 4.371   ; 0.000         ;
+; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 34.797  ; 0.000         ;
+; altera_reserved_tck                                                        ; 42.062  ; 0.000         ;
 +----------------------------------------------------------------------------+---------+---------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Hold Summary                                                                 ;
-+----------------------------------------------------------------------------+-------+---------------+
-; Clock                                                                      ; Slack ; End Point TNS ;
-+----------------------------------------------------------------------------+-------+---------------+
-; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; 0.196 ; 0.000         ;
-; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 0.254 ; 0.000         ;
-; altera_reserved_tck                                                        ; 0.314 ; 0.000         ;
-+----------------------------------------------------------------------------+-------+---------------+
++-----------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary                                                                  ;
++----------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                      ; Slack  ; End Point TNS ;
++----------------------------------------------------------------------------+--------+---------------+
+; CLOCK_50                                                                   ; -2.158 ; -4.165        ;
+; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; 0.173  ; 0.000         ;
+; altera_reserved_tck                                                        ; 0.308  ; 0.000         ;
+; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 0.310  ; 0.000         ;
++----------------------------------------------------------------------------+--------+---------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -173,8 +176,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                     ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------+--------+---------------+
-; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; 4.012  ; 0.000         ;
-; altera_reserved_tck                                                       ; 47.938 ; 0.000         ;
+; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; 3.950  ; 0.000         ;
+; altera_reserved_tck                                                       ; 46.212 ; 0.000         ;
 +---------------------------------------------------------------------------+--------+---------------+
 
 
@@ -183,8 +186,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                     ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------+-------+---------------+
-; altera_reserved_tck                                                       ; 0.874 ; 0.000         ;
-; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; 0.896 ; 0.000         ;
+; altera_reserved_tck                                                       ; 0.678 ; 0.000         ;
+; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; 1.045 ; 0.000         ;
 +---------------------------------------------------------------------------+-------+---------------+
 
 
@@ -196,10 +199,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; DRAM_CLK                                                                   ; 2.000  ; 0.000         ;
 ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1]  ; 2.000  ; 0.000         ;
 ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; 4.645  ; 0.000         ;
-; CLOCK_50                                                                   ; 9.730  ; 0.000         ;
+; CLOCK_50                                                                   ; 9.450  ; 0.000         ;
 ; CLOCK2_50                                                                  ; 9.751  ; 0.000         ;
-; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 19.695 ; 0.000         ;
-; altera_reserved_tck                                                        ; 49.575 ; 0.000         ;
+; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 19.693 ; 0.000         ;
+; altera_reserved_tck                                                        ; 49.498 ; 0.000         ;
 ; CLOCK_ADC_10                                                               ; 96.000 ; 0.000         ;
 +----------------------------------------------------------------------------+--------+---------------+
 
@@ -210,10 +213,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 
-Number of Synchronizer Chains Found: 82
+Number of Synchronizer Chains Found: 92
 Shortest Synchronizer Chain: 2 Registers
-Fraction of Chains for which MTBFs Could Not be Calculated: 0.451
-Worst Case Available Settling Time: 7.580 ns
+Fraction of Chains for which MTBFs Could Not be Calculated: 0.511
+Worst Case Available Settling Time: 8.456 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 2.4
@@ -227,9 +230,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------+-----------------+----------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                 ; Note ;
 +------------+-----------------+----------------------------------------------------------------------------+------+
-; 16.68 MHz  ; 16.68 MHz       ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ;      ;
-; 97.66 MHz  ; 97.66 MHz       ; altera_reserved_tck                                                        ;      ;
-; 196.08 MHz ; 196.08 MHz      ; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ;      ;
+; 16.24 MHz  ; 16.24 MHz       ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ;      ;
+; 69.51 MHz  ; 69.51 MHz       ; altera_reserved_tck                                                        ;      ;
+; 208.16 MHz ; 208.16 MHz      ; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ;      ;
+; 240.38 MHz ; 240.38 MHz      ; CLOCK_50                                                                   ;      ;
 +------------+-----------------+----------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -239,21 +243,23 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                      ; Slack   ; End Point TNS ;
 +----------------------------------------------------------------------------+---------+---------------+
-; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; -49.935 ; -1930.694     ;
-; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 34.900  ; 0.000         ;
-; altera_reserved_tck                                                        ; 44.880  ; 0.000         ;
+; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; -51.578 ; -1828.911     ;
+; CLOCK_50                                                                   ; 4.525   ; 0.000         ;
+; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 35.196  ; 0.000         ;
+; altera_reserved_tck                                                        ; 42.807  ; 0.000         ;
 +----------------------------------------------------------------------------+---------+---------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Hold Summary                                                                  ;
-+----------------------------------------------------------------------------+-------+---------------+
-; Clock                                                                      ; Slack ; End Point TNS ;
-+----------------------------------------------------------------------------+-------+---------------+
-; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; 0.202 ; 0.000         ;
-; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 0.240 ; 0.000         ;
-; altera_reserved_tck                                                        ; 0.285 ; 0.000         ;
-+----------------------------------------------------------------------------+-------+---------------+
++-----------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                                                                   ;
++----------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                      ; Slack  ; End Point TNS ;
++----------------------------------------------------------------------------+--------+---------------+
+; CLOCK_50                                                                   ; -1.341 ; -2.544        ;
+; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; 0.174  ; 0.000         ;
+; altera_reserved_tck                                                        ; 0.280  ; 0.000         ;
+; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 0.281  ; 0.000         ;
++----------------------------------------------------------------------------+--------+---------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -261,8 +267,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                     ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------+--------+---------------+
-; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; 4.606  ; 0.000         ;
-; altera_reserved_tck                                                       ; 48.129 ; 0.000         ;
+; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; 4.524  ; 0.000         ;
+; altera_reserved_tck                                                       ; 46.556 ; 0.000         ;
 +---------------------------------------------------------------------------+--------+---------------+
 
 
@@ -271,8 +277,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                     ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------+-------+---------------+
-; altera_reserved_tck                                                       ; 0.807 ; 0.000         ;
-; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; 0.830 ; 0.000         ;
+; altera_reserved_tck                                                       ; 0.636 ; 0.000         ;
+; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; 0.970 ; 0.000         ;
 +---------------------------------------------------------------------------+-------+---------------+
 
 
@@ -284,10 +290,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; DRAM_CLK                                                                   ; 2.000  ; 0.000         ;
 ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1]  ; 2.000  ; 0.000         ;
 ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; 4.664  ; 0.000         ;
-; CLOCK_50                                                                   ; 9.762  ; 0.000         ;
+; CLOCK_50                                                                   ; 9.460  ; 0.000         ;
 ; CLOCK2_50                                                                  ; 9.786  ; 0.000         ;
-; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 19.700 ; 0.000         ;
-; altera_reserved_tck                                                        ; 49.603 ; 0.000         ;
+; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 19.697 ; 0.000         ;
+; altera_reserved_tck                                                        ; 49.511 ; 0.000         ;
 ; CLOCK_ADC_10                                                               ; 96.000 ; 0.000         ;
 +----------------------------------------------------------------------------+--------+---------------+
 
@@ -298,10 +304,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 
-Number of Synchronizer Chains Found: 82
+Number of Synchronizer Chains Found: 92
 Shortest Synchronizer Chain: 2 Registers
-Fraction of Chains for which MTBFs Could Not be Calculated: 0.451
-Worst Case Available Settling Time: 8.698 ns
+Fraction of Chains for which MTBFs Could Not be Calculated: 0.511
+Worst Case Available Settling Time: 8.589 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 2.4
@@ -315,21 +321,23 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +----------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                      ; Slack   ; End Point TNS ;
 +----------------------------------------------------------------------------+---------+---------------+
-; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; -22.017 ; -217.639      ;
-; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 37.347  ; 0.000         ;
-; altera_reserved_tck                                                        ; 47.515  ; 0.000         ;
+; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; -22.878 ; -226.747      ;
+; CLOCK_50                                                                   ; 4.140   ; 0.000         ;
+; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 37.502  ; 0.000         ;
+; altera_reserved_tck                                                        ; 46.309  ; 0.000         ;
 +----------------------------------------------------------------------------+---------+---------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Hold Summary                                                                  ;
-+----------------------------------------------------------------------------+-------+---------------+
-; Clock                                                                      ; Slack ; End Point TNS ;
-+----------------------------------------------------------------------------+-------+---------------+
-; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; 0.087 ; 0.000         ;
-; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 0.108 ; 0.000         ;
-; altera_reserved_tck                                                        ; 0.144 ; 0.000         ;
-+----------------------------------------------------------------------------+-------+---------------+
++-----------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                                                                   ;
++----------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                      ; Slack  ; End Point TNS ;
++----------------------------------------------------------------------------+--------+---------------+
+; CLOCK_50                                                                   ; -0.041 ; -0.041        ;
+; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; 0.071  ; 0.000         ;
+; altera_reserved_tck                                                        ; 0.140  ; 0.000         ;
+; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 0.142  ; 0.000         ;
++----------------------------------------------------------------------------+--------+---------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -337,8 +345,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                     ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------+--------+---------------+
-; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; 6.843  ; 0.000         ;
-; altera_reserved_tck                                                       ; 49.232 ; 0.000         ;
+; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; 6.755  ; 0.000         ;
+; altera_reserved_tck                                                       ; 48.304 ; 0.000         ;
 +---------------------------------------------------------------------------+--------+---------------+
 
 
@@ -347,8 +355,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                     ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------+-------+---------------+
-; altera_reserved_tck                                                       ; 0.403 ; 0.000         ;
-; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; 0.416 ; 0.000         ;
+; altera_reserved_tck                                                       ; 0.305 ; 0.000         ;
+; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; 0.476 ; 0.000         ;
 +---------------------------------------------------------------------------+-------+---------------+
 
 
@@ -360,10 +368,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; DRAM_CLK                                                                   ; 2.000  ; 0.000         ;
 ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1]  ; 2.000  ; 0.000         ;
 ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; 4.710  ; 0.000         ;
-; CLOCK_50                                                                   ; 9.526  ; 0.000         ;
+; CLOCK_50                                                                   ; 9.272  ; 0.000         ;
 ; CLOCK2_50                                                                  ; 9.530  ; 0.000         ;
 ; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 19.730 ; 0.000         ;
-; altera_reserved_tck                                                        ; 49.412 ; 0.000         ;
+; altera_reserved_tck                                                        ; 49.396 ; 0.000         ;
 ; CLOCK_ADC_10                                                               ; 96.000 ; 0.000         ;
 +----------------------------------------------------------------------------+--------+---------------+
 
@@ -374,10 +382,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 
-Number of Synchronizer Chains Found: 82
+Number of Synchronizer Chains Found: 92
 Shortest Synchronizer Chain: 2 Registers
-Fraction of Chains for which MTBFs Could Not be Calculated: 0.451
-Worst Case Available Settling Time: 9.260 ns
+Fraction of Chains for which MTBFs Could Not be Calculated: 0.511
+Worst Case Available Settling Time: 9.207 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 2.4
@@ -386,30 +394,30 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                                                        ;
-+-----------------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
-; Clock                                                                       ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+-----------------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
-; Worst-case Slack                                                            ; -56.114   ; 0.087 ; 4.012    ; 0.403   ; 2.000               ;
-;  CLOCK2_50                                                                  ; N/A       ; N/A   ; N/A      ; N/A     ; 9.530               ;
-;  CLOCK_50                                                                   ; N/A       ; N/A   ; N/A      ; N/A     ; 9.526               ;
-;  CLOCK_ADC_10                                                               ; N/A       ; N/A   ; N/A      ; N/A     ; 96.000              ;
-;  DRAM_CLK                                                                   ; N/A       ; N/A   ; N/A      ; N/A     ; 2.000               ;
-;  altera_reserved_tck                                                        ; 44.371    ; 0.144 ; 47.938   ; 0.403   ; 49.412              ;
-;  u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; -56.114   ; 0.087 ; 4.012    ; 0.416   ; 4.645               ;
-;  u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1]  ; N/A       ; N/A   ; N/A      ; N/A     ; 2.000               ;
-;  u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 34.462    ; 0.108 ; N/A      ; N/A     ; 19.695              ;
-; Design-wide TNS                                                             ; -2919.63  ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
-;  CLOCK2_50                                                                  ; N/A       ; N/A   ; N/A      ; N/A     ; 0.000               ;
-;  CLOCK_50                                                                   ; N/A       ; N/A   ; N/A      ; N/A     ; 0.000               ;
-;  CLOCK_ADC_10                                                               ; N/A       ; N/A   ; N/A      ; N/A     ; 0.000               ;
-;  DRAM_CLK                                                                   ; N/A       ; N/A   ; N/A      ; N/A     ; 0.000               ;
-;  altera_reserved_tck                                                        ; 0.000     ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
-;  u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; -2919.630 ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
-;  u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1]  ; N/A       ; N/A   ; N/A      ; N/A     ; 0.000               ;
-;  u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 0.000     ; 0.000 ; N/A      ; N/A     ; 0.000               ;
-+-----------------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                                                         ;
++-----------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
+; Clock                                                                       ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
+; Worst-case Slack                                                            ; -57.811   ; -2.158 ; 3.950    ; 0.305   ; 2.000               ;
+;  CLOCK2_50                                                                  ; N/A       ; N/A    ; N/A      ; N/A     ; 9.530               ;
+;  CLOCK_50                                                                   ; 4.140     ; -2.158 ; N/A      ; N/A     ; 9.272               ;
+;  CLOCK_ADC_10                                                               ; N/A       ; N/A    ; N/A      ; N/A     ; 96.000              ;
+;  DRAM_CLK                                                                   ; N/A       ; N/A    ; N/A      ; N/A     ; 2.000               ;
+;  altera_reserved_tck                                                        ; 42.062    ; 0.140  ; 46.212   ; 0.305   ; 49.396              ;
+;  u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; -57.811   ; 0.071  ; 3.950    ; 0.476   ; 4.645               ;
+;  u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1]  ; N/A       ; N/A    ; N/A      ; N/A     ; 2.000               ;
+;  u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 34.797    ; 0.142  ; N/A      ; N/A     ; 19.693              ;
+; Design-wide TNS                                                             ; -2776.275 ; -4.165 ; 0.0      ; 0.0     ; 0.0                 ;
+;  CLOCK2_50                                                                  ; N/A       ; N/A    ; N/A      ; N/A     ; 0.000               ;
+;  CLOCK_50                                                                   ; 0.000     ; -4.165 ; N/A      ; N/A     ; 0.000               ;
+;  CLOCK_ADC_10                                                               ; N/A       ; N/A    ; N/A      ; N/A     ; 0.000               ;
+;  DRAM_CLK                                                                   ; N/A       ; N/A    ; N/A      ; N/A     ; 0.000               ;
+;  altera_reserved_tck                                                        ; 0.000     ; 0.000  ; 0.000    ; 0.000   ; 0.000               ;
+;  u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; -2776.275 ; 0.000  ; 0.000    ; 0.000   ; 0.000               ;
+;  u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1]  ; N/A       ; N/A    ; N/A      ; N/A     ; 0.000               ;
+;  u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 0.000     ; 0.000  ; N/A      ; N/A     ; 0.000               ;
++-----------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1228,13 +1236,20 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +----------------------------------------------------------------------------+----------------------------------------------------------------------------+--------------+------------+----------+----------+
 ; From Clock                                                                 ; To Clock                                                                   ; RR Paths     ; FR Paths   ; RF Paths ; FF Paths ;
 +----------------------------------------------------------------------------+----------------------------------------------------------------------------+--------------+------------+----------+----------+
-; altera_reserved_tck                                                        ; altera_reserved_tck                                                        ; 6892         ; 0          ; 74       ; 3        ;
+; altera_reserved_tck                                                        ; altera_reserved_tck                                                        ; 11968        ; 0          ; 185      ; 4        ;
+; CLOCK_50                                                                   ; altera_reserved_tck                                                        ; false path   ; 0          ; 0        ; 0        ;
 ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; altera_reserved_tck                                                        ; false path   ; 0          ; 0        ; 0        ;
+; altera_reserved_tck                                                        ; CLOCK_50                                                                   ; false path   ; 0          ; 0        ; 0        ;
+; CLOCK2_50                                                                  ; CLOCK_50                                                                   ; 2            ; 2          ; 0        ; 0        ;
+; CLOCK_50                                                                   ; CLOCK_50                                                                   ; 1639         ; 2          ; 0        ; 0        ;
+; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; CLOCK_50                                                                   ; 14           ; 0          ; 0        ; 0        ;
+; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1]  ; CLOCK_50                                                                   ; 2            ; 2          ; 0        ; 0        ;
+; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; CLOCK_50                                                                   ; 8            ; 2          ; 0        ; 0        ;
 ; altera_reserved_tck                                                        ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; false path   ; false path ; 0        ; 0        ;
 ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; > 2147483647 ; 0          ; 0        ; 0        ;
 ; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; 8            ; 0          ; 0        ; 0        ;
 ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 8            ; 0          ; 0        ; 0        ;
-; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 851          ; 0          ; 0        ; 0        ;
+; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 849          ; 0          ; 0        ; 0        ;
 +----------------------------------------------------------------------------+----------------------------------------------------------------------------+--------------+------------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1244,13 +1259,20 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +----------------------------------------------------------------------------+----------------------------------------------------------------------------+--------------+------------+----------+----------+
 ; From Clock                                                                 ; To Clock                                                                   ; RR Paths     ; FR Paths   ; RF Paths ; FF Paths ;
 +----------------------------------------------------------------------------+----------------------------------------------------------------------------+--------------+------------+----------+----------+
-; altera_reserved_tck                                                        ; altera_reserved_tck                                                        ; 6892         ; 0          ; 74       ; 3        ;
+; altera_reserved_tck                                                        ; altera_reserved_tck                                                        ; 11968        ; 0          ; 185      ; 4        ;
+; CLOCK_50                                                                   ; altera_reserved_tck                                                        ; false path   ; 0          ; 0        ; 0        ;
 ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; altera_reserved_tck                                                        ; false path   ; 0          ; 0        ; 0        ;
+; altera_reserved_tck                                                        ; CLOCK_50                                                                   ; false path   ; 0          ; 0        ; 0        ;
+; CLOCK2_50                                                                  ; CLOCK_50                                                                   ; 2            ; 2          ; 0        ; 0        ;
+; CLOCK_50                                                                   ; CLOCK_50                                                                   ; 1639         ; 2          ; 0        ; 0        ;
+; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; CLOCK_50                                                                   ; 14           ; 0          ; 0        ; 0        ;
+; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1]  ; CLOCK_50                                                                   ; 2            ; 2          ; 0        ; 0        ;
+; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; CLOCK_50                                                                   ; 8            ; 2          ; 0        ; 0        ;
 ; altera_reserved_tck                                                        ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; false path   ; false path ; 0        ; 0        ;
 ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; > 2147483647 ; 0          ; 0        ; 0        ;
 ; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; 8            ; 0          ; 0        ; 0        ;
 ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]  ; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 8            ; 0          ; 0        ; 0        ;
-; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 851          ; 0          ; 0        ; 0        ;
+; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] ; 849          ; 0          ; 0        ; 0        ;
 +----------------------------------------------------------------------------+----------------------------------------------------------------------------+--------------+------------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1260,10 +1282,11 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+------------+----------+----------+----------+
 ; From Clock                                                                ; To Clock                                                                  ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+------------+----------+----------+----------+
-; altera_reserved_tck                                                       ; altera_reserved_tck                                                       ; 117        ; 0        ; 2        ; 0        ;
+; altera_reserved_tck                                                       ; altera_reserved_tck                                                       ; 285        ; 0        ; 2        ; 0        ;
 ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; altera_reserved_tck                                                       ; false path ; 0        ; 0        ; 0        ;
+; altera_reserved_tck                                                       ; CLOCK_50                                                                  ; false path ; 0        ; 0        ; 0        ;
 ; altera_reserved_tck                                                       ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; false path ; 0        ; 0        ; 0        ;
-; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; 6149       ; 0        ; 0        ; 0        ;
+; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; 6150       ; 0        ; 0        ; 0        ;
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1273,10 +1296,11 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+------------+----------+----------+----------+
 ; From Clock                                                                ; To Clock                                                                  ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+------------+----------+----------+----------+
-; altera_reserved_tck                                                       ; altera_reserved_tck                                                       ; 117        ; 0        ; 2        ; 0        ;
+; altera_reserved_tck                                                       ; altera_reserved_tck                                                       ; 285        ; 0        ; 2        ; 0        ;
 ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; altera_reserved_tck                                                       ; false path ; 0        ; 0        ; 0        ;
+; altera_reserved_tck                                                       ; CLOCK_50                                                                  ; false path ; 0        ; 0        ; 0        ;
 ; altera_reserved_tck                                                       ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; false path ; 0        ; 0        ; 0        ;
-; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; 6149       ; 0        ; 0        ; 0        ;
+; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] ; 6150       ; 0        ; 0        ; 0        ;
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1300,8 +1324,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 47    ; 47   ;
-; Unconstrained Input Port Paths  ; 168   ; 168  ;
+; Unconstrained Input Ports       ; 49    ; 49   ;
+; Unconstrained Input Port Paths  ; 205   ; 205  ;
 ; Unconstrained Output Ports      ; 129   ; 129  ;
 ; Unconstrained Output Port Paths ; 161   ; 161  ;
 +---------------------------------+-------+------+
@@ -1360,6 +1384,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; DRAM_DQ[13]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; DRAM_DQ[14]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; DRAM_DQ[15]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[0]             ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[1]             ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO[3]             ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; KEY[0]              ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; KEY[1]              ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1552,6 +1578,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; DRAM_DQ[13]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; DRAM_DQ[14]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; DRAM_DQ[15]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[0]             ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[1]             ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO[3]             ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; KEY[0]              ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; KEY[1]              ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1713,7 +1741,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 27 03:16:04 2025
+    Info: Processing started: Thu Nov 27 14:34:06 2025
 Info: Command: quartus_sta DE10_Lite_Computer -c DE10_Lite_Computer
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1775,47 +1803,49 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -56.114
+Info (332146): Worst-case setup slack is -57.811
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -56.114           -2919.630 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
-    Info (332119):    34.462               0.000 u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] 
-    Info (332119):    44.371               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.196
+    Info (332119):   -57.811           -2776.275 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
+    Info (332119):     4.371               0.000 CLOCK_50 
+    Info (332119):    34.797               0.000 u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] 
+    Info (332119):    42.062               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is -2.158
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.196               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
-    Info (332119):     0.254               0.000 u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] 
-    Info (332119):     0.314               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 4.012
+    Info (332119):    -2.158              -4.165 CLOCK_50 
+    Info (332119):     0.173               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
+    Info (332119):     0.308               0.000 altera_reserved_tck 
+    Info (332119):     0.310               0.000 u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] 
+Info (332146): Worst-case recovery slack is 3.950
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     4.012               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
-    Info (332119):    47.938               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.874
+    Info (332119):     3.950               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
+    Info (332119):    46.212               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.678
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.874               0.000 altera_reserved_tck 
-    Info (332119):     0.896               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
+    Info (332119):     0.678               0.000 altera_reserved_tck 
+    Info (332119):     1.045               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
 Info (332146): Worst-case minimum pulse width slack is 2.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     2.000               0.000 DRAM_CLK 
     Info (332119):     2.000               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] 
     Info (332119):     4.645               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
-    Info (332119):     9.730               0.000 CLOCK_50 
+    Info (332119):     9.450               0.000 CLOCK_50 
     Info (332119):     9.751               0.000 CLOCK2_50 
-    Info (332119):    19.695               0.000 u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] 
-    Info (332119):    49.575               0.000 altera_reserved_tck 
+    Info (332119):    19.693               0.000 u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] 
+    Info (332119):    49.498               0.000 altera_reserved_tck 
     Info (332119):    96.000               0.000 CLOCK_ADC_10 
-Info (332114): Report Metastability: Found 82 synchronizer chains.
+Info (332114): Report Metastability: Found 92 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 
-    Info (332114): Number of Synchronizer Chains Found: 82
+    Info (332114): Number of Synchronizer Chains Found: 92
     Info (332114): Shortest Synchronizer Chain: 2 Registers
-    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.451
-    Info (332114): Worst Case Available Settling Time: 7.580 ns
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.511
+    Info (332114): Worst Case Available Settling Time: 8.456 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 2.4
@@ -1829,47 +1859,49 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: altera_internal_jtag  from: tck  to: tckutap
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -49.935
+Info (332146): Worst-case setup slack is -51.578
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -49.935           -1930.694 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
-    Info (332119):    34.900               0.000 u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] 
-    Info (332119):    44.880               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.202
+    Info (332119):   -51.578           -1828.911 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
+    Info (332119):     4.525               0.000 CLOCK_50 
+    Info (332119):    35.196               0.000 u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] 
+    Info (332119):    42.807               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is -1.341
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.202               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
-    Info (332119):     0.240               0.000 u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] 
-    Info (332119):     0.285               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 4.606
+    Info (332119):    -1.341              -2.544 CLOCK_50 
+    Info (332119):     0.174               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
+    Info (332119):     0.280               0.000 altera_reserved_tck 
+    Info (332119):     0.281               0.000 u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] 
+Info (332146): Worst-case recovery slack is 4.524
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     4.606               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
-    Info (332119):    48.129               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.807
+    Info (332119):     4.524               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
+    Info (332119):    46.556               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.807               0.000 altera_reserved_tck 
-    Info (332119):     0.830               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
+    Info (332119):     0.636               0.000 altera_reserved_tck 
+    Info (332119):     0.970               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
 Info (332146): Worst-case minimum pulse width slack is 2.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     2.000               0.000 DRAM_CLK 
     Info (332119):     2.000               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] 
     Info (332119):     4.664               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
-    Info (332119):     9.762               0.000 CLOCK_50 
+    Info (332119):     9.460               0.000 CLOCK_50 
     Info (332119):     9.786               0.000 CLOCK2_50 
-    Info (332119):    19.700               0.000 u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] 
-    Info (332119):    49.603               0.000 altera_reserved_tck 
+    Info (332119):    19.697               0.000 u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] 
+    Info (332119):    49.511               0.000 altera_reserved_tck 
     Info (332119):    96.000               0.000 CLOCK_ADC_10 
-Info (332114): Report Metastability: Found 82 synchronizer chains.
+Info (332114): Report Metastability: Found 92 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 
-    Info (332114): Number of Synchronizer Chains Found: 82
+    Info (332114): Number of Synchronizer Chains Found: 92
     Info (332114): Shortest Synchronizer Chain: 2 Registers
-    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.451
-    Info (332114): Worst Case Available Settling Time: 8.698 ns
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.511
+    Info (332114): Worst Case Available Settling Time: 8.589 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 2.4
@@ -1880,47 +1912,49 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: altera_internal_jtag  from: tck  to: tckutap
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -22.017
+Info (332146): Worst-case setup slack is -22.878
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -22.017            -217.639 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
-    Info (332119):    37.347               0.000 u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] 
-    Info (332119):    47.515               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.087
+    Info (332119):   -22.878            -226.747 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
+    Info (332119):     4.140               0.000 CLOCK_50 
+    Info (332119):    37.502               0.000 u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] 
+    Info (332119):    46.309               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is -0.041
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.087               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
-    Info (332119):     0.108               0.000 u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] 
-    Info (332119):     0.144               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 6.843
+    Info (332119):    -0.041              -0.041 CLOCK_50 
+    Info (332119):     0.071               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
+    Info (332119):     0.140               0.000 altera_reserved_tck 
+    Info (332119):     0.142               0.000 u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] 
+Info (332146): Worst-case recovery slack is 6.755
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     6.843               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
-    Info (332119):    49.232               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.403
+    Info (332119):     6.755               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
+    Info (332119):    48.304               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.305
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.403               0.000 altera_reserved_tck 
-    Info (332119):     0.416               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
+    Info (332119):     0.305               0.000 altera_reserved_tck 
+    Info (332119):     0.476               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
 Info (332146): Worst-case minimum pulse width slack is 2.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     2.000               0.000 DRAM_CLK 
     Info (332119):     2.000               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] 
     Info (332119):     4.710               0.000 u0|system_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0] 
-    Info (332119):     9.526               0.000 CLOCK_50 
+    Info (332119):     9.272               0.000 CLOCK_50 
     Info (332119):     9.530               0.000 CLOCK2_50 
     Info (332119):    19.730               0.000 u0|video_pll|video_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1] 
-    Info (332119):    49.412               0.000 altera_reserved_tck 
+    Info (332119):    49.396               0.000 altera_reserved_tck 
     Info (332119):    96.000               0.000 CLOCK_ADC_10 
-Info (332114): Report Metastability: Found 82 synchronizer chains.
+Info (332114): Report Metastability: Found 92 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 
-    Info (332114): Number of Synchronizer Chains Found: 82
+    Info (332114): Number of Synchronizer Chains Found: 92
     Info (332114): Shortest Synchronizer Chain: 2 Registers
-    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.451
-    Info (332114): Worst Case Available Settling Time: 9.260 ns
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.511
+    Info (332114): Worst Case Available Settling Time: 9.207 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 2.4
@@ -1929,9 +1963,9 @@ Info (332114): Report Metastability: Found 82 synchronizer chains.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5138 megabytes
-    Info: Processing ended: Thu Nov 27 03:16:09 2025
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 5144 megabytes
+    Info: Processing ended: Thu Nov 27 14:34:12 2025
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:18
 
 
