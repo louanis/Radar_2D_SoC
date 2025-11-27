@@ -104,7 +104,8 @@ architecture Behavioral of DE10_Lite_Computer is
             video_pll_ref_reset_reset          : in    std_logic                     := 'X';             -- reset
             ip_telem_avalon_0_conduit_end_trig : out   std_logic;                                        -- trig
             ip_telem_avalon_0_conduit_end_dist : out   std_logic_vector(9 downto 0);                     -- dist
-            ip_telem_avalon_0_conduit_end_echo : in    std_logic                     := 'X'              -- echo
+            ip_telem_avalon_0_conduit_end_echo : in    std_logic                     := 'X'  ;            -- echo
+				ip_servo_avalon_0_conduit_end_commande : out   std_logic                                        -- commande
         );
     end component Computer_System;
 	 
@@ -154,6 +155,7 @@ begin
             vga_B                              => vga_B,                              --                              .B
             video_pll_ref_clk_clk              => CLOCK2_50,              --             video_pll_ref_clk.clk
             video_pll_ref_reset_reset          => '0',          --           video_pll_ref_reset.reset
+				ip_servo_avalon_0_conduit_end_commande => GPIO(0),
             ip_telem_avalon_0_conduit_end_trig => GPIO(1), -- ip_telem_avalon_0_conduit_end.trig
             ip_telem_avalon_0_conduit_end_dist => LEDR, --                              .dist
             ip_telem_avalon_0_conduit_end_echo => GPIO(3)  --                              .echo

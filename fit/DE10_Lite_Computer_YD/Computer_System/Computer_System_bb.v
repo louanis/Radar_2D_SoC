@@ -4,6 +4,7 @@ module Computer_System (
 	arduino_reset_n_export,
 	hex3_hex0_export,
 	hex5_hex4_export,
+	ip_servo_avalon_0_conduit_end_commande,
 	ip_telem_avalon_0_conduit_end_trig,
 	ip_telem_avalon_0_conduit_end_dist,
 	ip_telem_avalon_0_conduit_end_echo,
@@ -36,6 +37,7 @@ module Computer_System (
 	output		arduino_reset_n_export;
 	output	[31:0]	hex3_hex0_export;
 	output	[15:0]	hex5_hex4_export;
+	output		ip_servo_avalon_0_conduit_end_commande;
 	output		ip_telem_avalon_0_conduit_end_trig;
 	output	[9:0]	ip_telem_avalon_0_conduit_end_dist;
 	input		ip_telem_avalon_0_conduit_end_echo;

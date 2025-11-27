@@ -108,3 +108,9 @@ curr_state.WAIT_ECHO 0 0 0 1 1
 curr_state.WAIT_END_ECHO 0 0 1 0 1 
 curr_state.CALC_DIST 0 1 0 0 1 
 curr_state.WAIT_TRIGGER 1 0 0 0 1 
+
+State Machine - |DE10_Lite_Computer|Computer_System:u0|servomoteur:ip_servo_avalon_0|curr_state
+Name curr_state.DOWN curr_state.PULSE curr_state.START_PULSE 
+curr_state.START_PULSE 0 0 0 
+curr_state.PULSE 0 1 1 
+curr_state.DOWN 1 0 1 

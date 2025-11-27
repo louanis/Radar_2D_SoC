@@ -12,7 +12,7 @@ architecture sim of tb_servomoteur is
     --------------------------------------------------------------------
     signal clk_tb        : std_logic := '0';
     signal rst_n_tb      : std_logic := '0';
-    signal position_tb   : integer   := 0;
+    signal position_tb   : std_logic_vector(7 downto 0);
     signal commande_tb   : std_logic;
 
     --------------------------------------------------------------------
@@ -51,10 +51,12 @@ begin
     --------------------------------------------------------------------
     DUT : entity work.servomoteur
         port map(
-            clk      => clk_tb,
-            rst_n    => rst_n_tb,
-            position => position_tb,
-            commande => commande_tb
+            clk        => clk_tb,
+            rst_n      => rst_n_tb,
+            position   => position_tb,
+            commande   => commande_tb,
+            chipselect => '1',
+            write_n    => '0'
         );
 
 
@@ -71,7 +73,7 @@ begin
         commande_ref_tb <= '0';
 
         -- Ideal high time in microseconds:
-        pulse_us := integer(500 + position_tb * 2000 / 180);
+        pulse_us := integer(500 + to_integer(unsigned(position_tb)) * 2000 / 180);
 
         -- HIGH part of PWM
         commande_ref_tb <= '1';
@@ -114,19 +116,19 @@ begin
         --------------------------------------------------------------------------------
         -- Test 0°  => expected pulse ≈ 0.5 ms
         --------------------------------------------------------------------------------
-        position_tb <= 0;
+        position_tb <= (others => '0');
         wait for 40 ms;
 
         --------------------------------------------------------------------------------
         -- Test 90° => expected pulse ≈ 1.5 ms
         --------------------------------------------------------------------------------
-        position_tb <= 90;
+        position_tb <= std_logic_vector(to_unsigned(90,8));
         wait for 40 ms;
 
         --------------------------------------------------------------------------------
         -- Test 180° => expected pulse ≈ 2.5 ms
         --------------------------------------------------------------------------------
-        position_tb <= 180;
+        position_tb <= std_logic_vector(to_unsigned(180,8));
         wait for 40 ms;
 
         --------------------------------------------------------------------------------
